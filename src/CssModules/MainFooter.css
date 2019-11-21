@@ -3,7 +3,11 @@
 .mainFooterBlock {
   display: flex;
   justify-content: center;
-  margin: 25% auto;
+  align-items: center;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translateX(-50%);
 }
 
 .under_slide_ul {
