@@ -31,15 +31,15 @@ export default HeaderNavbar;
 
 // import React from 'react';
 // // import './HeaderNavbar.css';
-// import nicklacesBg from '../../Images/compHeaderImg/necBg.jpg';
-// import bracBg from '../../Images/compHeaderImg/bracBg.jpg';
-// import ringsBg from '../../Images/compHeaderImg/earBg.jpg';
-// import earsBg from '../../Images/compHeaderImg/ringBg.png';
+// import necklacesSectionBg from '../../Images/compHeaderImg/necklacesSection.jpg';
+// import ringSectionBg from '../../Images/compHeaderImg/ringSection.png';
+// import braceletSectionBg from '../../Images/compHeaderImg/braceletSection.jpg';
+// import /earringSectionBg from '../../Images/compHeaderImg/earringSection.jpg';
 // const HeaderNavbar = ({necklacesStyle,braceletStyle,ringBg,earBg}) => {
 
 //     const necstyle = {
 //         root:{
-//             backgroundImage: necklacesStyle ? `url(${nicklacesBg})`  :  (  braceletStyle ?  `url(${bracBg})` : ( ringsBg ? `url(${ringsBg})` :  (earsBg ? `url(${earsBg})` : "none"))),
+//             backgroundImage: necklacesStyle ? `url(${necklacesSectionBg})`  :  (  braceletStyle ?  `url(${braceletSectionBg})` : ( ringSectionBg ? `url(${ringSectionBg})` :  (earringSectionBg ? `url(${earringSectionBg})` : "none"))),
 //             backgroundRepeat: 'noRepeat',
 //             backgroundSize:'cover',
 //             backgroundPosition: "center"

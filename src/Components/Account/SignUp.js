@@ -1,41 +1,42 @@
 import React from "react";
 import { Fragment } from "react";
+
 const SignUp = () => {
     return (
         <Fragment>
-            <div className="bg"></div>
-            <div className="modal">
-                <div className="card1">
-                    <div className="title1">Sign up</div>
-                    <form>
-                        <div className="input-group">
-                            <input type="text" name="name" placeholder="Name" />
-                        </div>
-                        <div className="input-group">
-                            <input type="text" name="surname" placeholder="Surname" />
-                        </div>
-                        <div className="input-group">
-                            <input type="email" name="email" placeholder="Email" />
-                        </div>
-                        <div className="input-group">
-                            <input type="password" name="password" placeholder="Password" />
-                        </div>
-                        <div className="input-group">
-                            <input
-                                type="password"
-                                name="confirm password"
-                                placeholder="Confirm Password"
-                            />
-                        </div>
-                    </form>
-                    <button className="submit1">Register</button>
-                    <br />
-                    <span className="noAccount"> Already have account? </span>
-                    <br />
-                    ​
-                    <span className="login">Login here</span>
-                </div>
+           <div className="wrapper">
+        <div className="box1">
+            <div className="content">
+                <div className="registerLogo"></div>
             </div>
+        </div>
+        <div className="box2">
+            <div className="content">
+                <h2 className="title">Sign Up</h2>
+                <form>
+                    <div>
+                        <input type="text" required name="name" id="name" placeholder="Enter Your Name" />
+                    </div>
+                    <div>
+                        <input type="text" required name="surname" id="surname" placeholder="Enter Your Surname" />
+                    </div>
+                    <div>
+                        <input type="email" required name="email" id="email" placeholder="Enter Your Email" />
+                    </div>
+                    <div>
+                        <input type="password" required name="password" id="password" placeholder="Enter Your Password" />
+                    </div>
+                    <div>
+                        <input type="password" required name="password" id="password" placeholder="Confirm your Password" />
+                    </div>
+                    <div>
+                    <button className="submit">Sign Up</button>
+                    </div>
+                </form>
+                <p>Already have an account? <a class="changer" href="#">Sign in</a> </p>
+            </div>
+        </div>
+    </div>
         </Fragment>
     );
 };
