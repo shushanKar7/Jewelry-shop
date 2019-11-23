@@ -1,5 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
+import {Link} from 'react-router-dom';
 
 const SignIn = () => {
     return (
@@ -38,9 +39,9 @@ const SignIn = () => {
             </form>
             <p>
               Don't have an account?{" "}
-              <a>
+              <Link to = '/SignUp'><a>
                 Sign up
-              </a>{" "}
+              </a></Link>{" "}
             </p>
           </div>
         </div>

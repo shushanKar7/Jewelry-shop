@@ -11,9 +11,14 @@ class App extends Component {
     return (
       <Router>
         <div className="container">
-         <Route path = '/SignIn' component = {SignIN}></Route>
-         <Route path = '/SignUp' component = {SignUp}></Route>
-          <SlideShow />
+
+        <Route exact path = '/SignIn' component = {SignIN}></Route>
+         <Route exact path = '/SignUp' component = {SignUp}></Route>
+         <Route exact patch = '/' component = {SlideShow}></Route>
+         {/* <SlideShow /> */}
+         {/* <Route exact patch = '/' component = {SlideShow}></Route> */}
+
+         
         </div>
       </Router>
     );

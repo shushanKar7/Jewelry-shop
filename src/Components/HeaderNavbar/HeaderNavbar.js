@@ -1,9 +1,11 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
+
 const HeaderNavbar = () => {
     return (
         <div className = 'headerNavbar'>
             <div className = "accountCartBlcok">
-                <i className="fa fa-user"><span>My Account</span></i>
+                <Link to = '/SignIN'><i className="fa fa-user"><span>My Account</span></i></Link>
                 <i className="fa fa-heart"><span>Saved Items</span></i>
                 <i className="fa fa-shopping-cart"><span>Cart</span></i>
             </div>
