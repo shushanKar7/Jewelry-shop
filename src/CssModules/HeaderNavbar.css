@@ -96,6 +96,7 @@ span {
 .fa-heart {
   padding: 5px 10px;
   font-size: 16px;
+  color: white;
 }
 i span {
   font-size: 16px;
@@ -117,6 +118,7 @@ i span {
 .fa-heart:hover {
   text-shadow: 0 0 10px white;
   transition: 0.2s;
+
 }
 
 /* NAV LI EFFECTS */
