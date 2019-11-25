@@ -108,8 +108,8 @@ i span {
 }
 .accountCartBlcok {
   position: absolute;
+  top:8%;
   right: 50px;
-  top: 50px;
   cursor: pointer;
   color: white;
 }
@@ -162,5 +162,16 @@ nav li.effect-box:hover:before {
 @media screen and (max-width: 900px) {
   .headerNavbar i span {
     display: none;
+  }
+  .logo{
+    margin:5% auto;
+  }
+  .accountCartBlcok{
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  .under_slide_ul a{
+    padding: 5px 7px;
+    font-size: 16px;
   }
 }
