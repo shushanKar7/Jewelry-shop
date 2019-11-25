@@ -14,8 +14,8 @@
   background-size: cover;
   position: absolute;
   z-index: -1;
-  top: 1%;
-  left: 1%;
+  top: 5%;
+  left: 2.5%;
 }
 
 .box1 {
@@ -113,6 +113,16 @@ input:focus {
 
 .wrapper a:hover {
   text-decoration: underline;
+}
+
+
+
+
+.error {
+  color: #4D1B26;
+  font-size: 10px;
+  display: relative;
+  padding: 5px;
 }
 
 @media screen and (max-width: 992px) {
