@@ -92,7 +92,7 @@ input:focus {
   margin: 0 auto;
   border-radius: 25px;
   border: 0;
-  background-color: #4d1b26;
+  background-color: #401D22;
   color: white;
   padding: 10px 30px;
   font-size: 16px;
@@ -102,7 +102,7 @@ input:focus {
   transition: 0.3s;
 }
 .submit:hover{
-  background:#853042;
+  background:#370B0D;
 }
 .box2 p {
   font-size: 16px;

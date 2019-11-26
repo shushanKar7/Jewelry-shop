@@ -182,4 +182,7 @@ nav li.effect-box:hover:before {
   nav ul{
     display: grid;
   }
+  nav li {
+    width: 150px;
+  }
 }
