@@ -74,7 +74,7 @@ input {
   width: 100%;
   font-size: 18px;
   padding: 5px;
-  color: rgba(0, 0, 0, 0.4);
+  color: #444;
   font-family: "Varela Round";
 }
 
@@ -98,8 +98,12 @@ input:focus {
   font-size: 16px;
   margin-top: 30px;
   cursor: pointer;
+  outline: none;
+  transition: 0.3s;
 }
-
+.submit:hover{
+  background:#853042;
+}
 .box2 p {
   font-size: 16px;
   text-align: center;
@@ -109,6 +113,7 @@ input:focus {
 .box2 p a {
   text-decoration: none;
   color: #4d1b26;
+  cursor: pointer;
 }
 
 .wrapper a:hover {
@@ -120,7 +125,7 @@ input:focus {
 
 .error {
   color: #4D1B26;
-  font-size: 10px;
+  font-size: 12px;
   display: relative;
   padding: 5px;
 }

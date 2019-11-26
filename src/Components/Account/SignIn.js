@@ -1,6 +1,6 @@
 import React from "react";
 import { Fragment } from "react";
-import {Link} from 'react-router-dom';
+// import {Link} from 'react-router-dom';
 import { Component } from 'react';
 
 const validEmailRegex = RegExp(/^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i);
@@ -105,9 +105,9 @@ class SignIn extends Component {
             </form>
             <p>
               Don't have an account?{" "}
-              <Link to = '/SignUp'><a>
+              <a>
                   Sign up
-              </a></Link>{" "}
+              </a>{" "}
             </p>
           </div>
         </div>
