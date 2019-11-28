@@ -19,6 +19,7 @@ const properties = {
 const Slideshow = () => {
   return (
     <div className="containerSlide">
+      
       <Slide {...properties}>
         {images.map((image, index) => {
           return (
