@@ -1,11 +1,10 @@
 import React from "react";
-
 const MainFooter = () => {
   return (
     <div className="mainFooterBlock">
       <ul className="under_slide_ul">
-        <a className="cont" href="https://google.com" target="_blank">
-          Contact
+        <a className="twit" href="https://twitter.com/s_armenian" target="_blank">
+        Twitter
         </a>
         <a
           className="fb"
@@ -14,12 +13,11 @@ const MainFooter = () => {
         >
           Facebook
         </a>
-        <a className="inst" href="https://www.instagram.com" target="_blank">
+        <a className="inst" href="https://www.instagram.com/s_s_armenian_brand5/" target="_blank">
           Instagram
         </a>
       </ul>
     </div>
   );
 };
-
 export default MainFooter;
