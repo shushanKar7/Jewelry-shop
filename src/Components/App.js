@@ -4,17 +4,26 @@ import SlideShow from "./SlideShow/SlideShow";
 import SignIn from "./Account/SignIn";
 import SignUp from "./Account/SignUp";
 import { connect } from "react-redux";
-// import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import Rings from "./Rings";
+import Necklaces from '../Components/Necklaces'
 
-const App = props => {
-  let { openSignIn, sectionName } = props;
- 
-
-  return openSignIn ? <SignIn /> : <SlideShow />;
-
-  // return (
-  //   <Fragment>{!sectionName ? <SlideShow /> : toSection(sectionName)}</Fragment>
-  // );
+class App extends Component {
+   render() {
+     return(
+      <Router>
+      <div className="container">
+        <Switch>
+          <Route exact path='/' component={SlideShow}></Route>
+          <Route  path='/SignUp' component={SignUp}></Route>
+          <Route  path='/SignIn' component={SignIn}></Route>
+          <Route  path='/rings' component={Rings}></Route>
+          <Route  path='/necklaces' component={Necklaces}></Route>
+        </Switch>
+      </div>
+    </Router>
+     )
+   }
 };
 
 let mapStateToProps = state => {

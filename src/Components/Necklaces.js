@@ -1,8 +1,25 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
+import HeaderNavbar from './HeaderNavbar/HeaderNavbar';
+import NeacklaceSectionBg from "../Images/compHeaderImg/necklaceSection.jpg";
+import { connect } from 'react-redux';
+import ItemBox from './ItemBox/ItemBox';
 
-class Neacklaces extends Component{
-    render(){
-        return <h1>NECKLACES</h1>
+
+const Necklaces = ({necklaces}) => {
+        return(
+            <Fragment>
+                <HeaderNavbar background = {NeacklaceSectionBg} />
+            {necklaces.map(necklace => <ItemBox {...necklace} />)}
+            </Fragment>
+        )
+}
+
+let vercnenqProductsStatic = merReduceriStateVoreStanumaConnectic =>{
+
+
+    return{
+        necklaces:merReduceriStateVoreStanumaConnectic.products.filter(product=>product.category=='Necklace')
     }
 }
-export default Neacklaces;
+
+export default connect(vercnenqProductsStatic,)(Necklaces);

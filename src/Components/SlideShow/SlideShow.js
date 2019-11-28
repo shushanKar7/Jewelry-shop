@@ -18,7 +18,7 @@ const properties = {
   images = [img1, img2, img3, img4, img5];
 const Slideshow = () => {
   return (
-    <div className="containerSlide">
+    <div className="containerSlide" >
       
       <Slide {...properties}>
         {images.map((image, index) => {
