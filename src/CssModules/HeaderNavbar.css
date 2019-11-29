@@ -37,7 +37,6 @@
 }
 .navBar {
   width: 100%;
-  /* padding-bottom: 20px; */
   margin-top: 30px;
   padding-bottom: 10px;
 }
@@ -46,9 +45,9 @@ nav {
   margin: auto;
   text-align: center;
 }
-.routerLink{
-  text-decoration: none;
-}
+.routerLink{text-decoration: none;}
+ 
+
 nav ul {
   padding: 0;
   margin: 0;
@@ -91,9 +90,9 @@ nav li {
   text-shadow: 0 0 10px #582957;
   color: white;
 }
-span {
-  font-family: "Open Sans", sans-serif;
-}
+span {font-family: "Open Sans", sans-serif;}
+  
+
 .fa-user,
 .fa-shopping-cart,
 .fa-heart {
@@ -124,7 +123,6 @@ i span {
 .fa-heart:hover {
   text-shadow: 0 0 10px white;
   transition: 0.2s;
-
 }
 
 /* NAV LI EFFECTS */

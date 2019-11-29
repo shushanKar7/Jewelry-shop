@@ -1,9 +1,12 @@
 import React from 'react';
 function ItemBox(props) {
+    console.log(props.image)
     return (
-
         <div className="itemBox">
-            <div className="itemImage" style={{ backgroundImage: `url(${props.image})` }}></div>
+            <div className="itemImage" style={{ backgroundImage: `url(${props.image})` }}>
+                <div className = 'overlayText'><span></span></div>
+                <div className = 'overlay'></div>
+            </div>
             <div className="itemDetail">
                 <div className = 'itemBoxSpan'>
                     <span>{props.name}</span><br />
@@ -15,7 +18,6 @@ function ItemBox(props) {
                 </div>
             </div>
         </div>
-
     );
 }
 export default ItemBox;
