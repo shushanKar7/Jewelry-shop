@@ -15,7 +15,7 @@ const HeaderNavbar = props => {
     >
       <div className="accountCartBlcok">
         <i className="fa fa-user">
-          <Link to="/SignIn">
+          <Link className = 'routerLink' to="/SignIn">
             <span>My Account</span>
           </Link>
         </i>

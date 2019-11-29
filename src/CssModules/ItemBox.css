@@ -1,3 +1,6 @@
+.itemBoxWrapper{
+  display: flex;
+}
 .itemBox {
   width: 15%;
   height: 40%;
