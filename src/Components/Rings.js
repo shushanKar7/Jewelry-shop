@@ -9,7 +9,9 @@ const Rings = ({ rings }) => {
   return (
     <Fragment>
       <HeaderNavbar background={ringSectionBg} />
-      {rings.map(ring =>  <ItemBox {...ring} />)}
+      <div className='itemBoxWrapper'>
+        {rings.map(ring => <ItemBox {...ring} />)}
+      </div>
     </Fragment>
   );
 };
@@ -19,7 +21,7 @@ let vercnenqProductsStatic = merReduceriStateVoreStanumaConnectic => {
     rings: merReduceriStateVoreStanumaConnectic.products.filter(product => product.category === "Ring")
   };
 };
-export default connect(vercnenqProductsStatic,)(Rings);
+export default connect(vercnenqProductsStatic)(Rings);
 
 
 //1) connect enq berum vori mej grum enq functia vorov stanum enq state reduceri meji.
