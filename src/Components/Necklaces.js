@@ -9,7 +9,9 @@ const Necklaces = ({necklaces}) => {
         return(
             <Fragment>
                 <HeaderNavbar background = {NeacklaceSectionBg} />
+                <div className='itemBoxWrapper'>
             {necklaces.map(necklace => <ItemBox {...necklace} />)}
+            </div>
             </Fragment>
         )
 }

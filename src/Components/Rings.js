@@ -3,6 +3,7 @@ import { connect } from "react-redux";
 import ringSectionBg from "../Images/compHeaderImg/ringSection.jpg";
 import HeaderNavbar from "./HeaderNavbar/HeaderNavbar";
 import ItemBox from "./ItemBox/ItemBox";
+// import Footer from '../Components/sectionFooter/Footer'
 
 const Rings = ({ rings }) => {
   return (
@@ -11,6 +12,7 @@ const Rings = ({ rings }) => {
       <div className='itemBoxWrapper'>
         {rings.map(ring => <ItemBox {...ring} />)}
       </div>
+      {/* <Footer /> */}
     </Fragment>
   );
 };

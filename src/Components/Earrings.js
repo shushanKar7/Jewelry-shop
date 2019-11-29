@@ -9,9 +9,11 @@ const Earrings = ({ earrings }) => {
   return (
     <Fragment>
       <HeaderNavbar background={earringSectionBg} />
+      <div className='itemBoxWrapper'>
       {earrings.map(earring => (
         <ItemBox {...earring} />
       ))}
+      </div>
     </Fragment>
   );
 };

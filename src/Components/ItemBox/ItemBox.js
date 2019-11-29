@@ -1,6 +1,5 @@
 import React from 'react';
 function ItemBox(props) {
-    console.log(props.image)
     return (
 
         <div className="itemBox">
