@@ -68,7 +68,7 @@ class SignIn extends Component {
       <div className="wrapper">
         <div className="box1">
           <div className="content">
-            <div className="registerLogo"></div>
+         <Link to="./"><div className="registerLogo"></div></Link>   
           </div>
         </div>
         <div className="box2">
@@ -118,8 +118,3 @@ class SignIn extends Component {
   }
 }
 export default SignIn
-
-
-
-
-

@@ -2,6 +2,7 @@
 @import "Account.css";
 @import "ItemBox.css";
 @import "MainFooter.css";
+@import "Footer.css";
 
 * {
   margin: 0;

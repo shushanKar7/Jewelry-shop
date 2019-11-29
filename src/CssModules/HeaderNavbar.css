@@ -46,6 +46,9 @@ nav {
   margin: auto;
   text-align: center;
 }
+.routerLink{
+  text-decoration: none;
+}
 nav ul {
   padding: 0;
   margin: 0;
@@ -100,6 +103,7 @@ span {
 }
 i span {
   font-size: 16px;
+  color:white;
 }
 .fa-user:before,
 .fa-shopping-cart:before,

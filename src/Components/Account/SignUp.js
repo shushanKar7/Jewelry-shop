@@ -20,14 +20,15 @@ const validEmailRegex = RegExp(
   
   class SignUp extends Component {
     state = {
+      account: false,
       formValid: false,
       errorCount: null,
       errors: {
         name: "",
         surname: "",
-  
         email: "",
-        password: ""
+        password: "",
+        confirmPassword: ""
       }
     };
   
@@ -45,16 +46,21 @@ const validEmailRegex = RegExp(
           break;
         case "email":
           errors.email = validEmailRegex.test(value) ? "" : "Email is not valid!";
-          break;
-  
+          break; 
         case "password":
           errors.password =
-            value.length < 8 ? "Password must be 8 characters long!" : "";
+            value.length < 8 || value.length > 12 ? "Password must be 8-12 characters long!" : "";
           break;
         default:
           break;
       }
-  
+      {if(this.state.password !== this.state.confirmPassword){
+        this.state.errors = "Passwords didn't match"
+      }else{
+        this.setState({
+          account: true
+        })
+      }} 
       this.setState({ errors, [name]: value });
     };
   
@@ -71,7 +77,7 @@ const validEmailRegex = RegExp(
           <div className="wrapper">
             <div className="box1">
               <div className="content">
-                <div className="registerLogo"></div>
+              <Link to='./'><div className="registerLogo"></div></Link>  
               </div>
             </div>
             <div className="box2">
@@ -156,4 +162,3 @@ const validEmailRegex = RegExp(
     }
   }
   export default SignUp;
-

@@ -1,45 +1,38 @@
-import ring1 from './Images/ringSection/ring1.jpg'
-import ring2 from './Images/ringSection/ring2.jpg'
-import ring3 from './Images/ringSection/ring3.png'
-import ring4 from './Images/ringSection/ring4.jpg'
-import ring5 from './Images/ringSection/ring5.jpg'
-import ring6 from './Images/ringSection/ring6.jpg'
-import necklace1 from './Images/necklaceSection/necklace1.jpg'
-import necklace2 from './Images/necklaceSection/necklace2.jpg'
-import necklace3 from './Images/necklaceSection/necklace3.jpg'
-import necklace4 from './Images/necklaceSection/necklace4.jpg'
-import necklace5 from './Images/necklaceSection/necklace5.jpg'
-import necklace6 from './Images/necklaceSection/necklace6.jpg'
-
-
-
+let neckalesURLs = require.context("./Images/necklaceSection", false, /.*\.jpg$/),
+    [products, necklaces, bracelets, earrnings, rings ] = [ [], [], [], [], [] ],
+    braceletsURLs = require.context ( "./Images/braceletSection", false, /.*\.jpg$/ ),
+    earringsURLs = require.context ( "./Images/earringSection", false, /.*\.jpg$/ ),
+    ringsURLs = require.context ( "./Images/ringSection", false, /.*\.jpg$/ ),
+    productDescreption = [ [], [], [], [] ];
+neckalesURLs.keys().forEach(function(key){
+    necklaces[necklaces.length] = neckalesURLs(key);
+});
+braceletsURLs.keys().forEach(function(key){
+    bracelets[bracelets.length] = braceletsURLs(key);
+});
+ringsURLs.keys().forEach(function(key){
+    rings[rings.length] = ringsURLs(key);
+});
+earringsURLs.keys().forEach(function(key){
+    earrnings[earrnings.length] = earringsURLs(key);
+});
+let id = 0;
 class ProductMaker {
     constructor (name,price,category,image){
         this.name = name;
         this.price = price;
         this.category = category;
-        this.quantity = 0;
         this.isFavorite = false;
         this.onCart = false;
         this.image = image;
-        this.id = Math.random()*Math.random()
+        this.id = id++;
     }
 }
-let products = [
-    new ProductMaker('Obsidian',50,"Ring",ring1),
-    new ProductMaker('Obsidian',50,"Ring",ring2),
-    new ProductMaker('Obsidian',50,"Ring",ring3),
-    new ProductMaker('Obsidian',50,"Ring",ring4),
-    new ProductMaker('Obsidian',50,"Ring",ring5),
-    new ProductMaker('Amber',79,"Earring"),
-    new ProductMaker('Moon Stone',43,"Ring",ring6),
-    new ProductMaker('Andalusite',50,"Bracelet",),
-    new ProductMaker('Bloodstone',87,"Necklace",necklace1),
-    new ProductMaker('Afghanite',100,"Earring",),
-    new ProductMaker('Agate',23,"Necklace",necklace2),
-    new ProductMaker('Asurite',60,"Necklace",necklace3),
-    new ProductMaker('Asurite',60,"Necklace",necklace4),
-    new ProductMaker('Emerald',79,"Necklace",necklace5),
-    new ProductMaker('Bloodstone',87,"Necklace",necklace6),
-] 
+for ( let i = 0; i < necklaces.length; i++ ) {
+    products[products.length] = new ProductMaker('Obsidian',50,"Ring", rings[i]);
+    products[products.length] = new ProductMaker('Amber',79,"Earring", earrnings[i]);
+    products[products.length] = new ProductMaker('Bloodstone',87,"Necklace", necklaces[i]);
+    console.log(necklaces[i])
+    products[products.length] = new ProductMaker('Andalusite',50,"Bracelet", bracelets[i]);
+}
 export default products;

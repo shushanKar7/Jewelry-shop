@@ -3,13 +3,16 @@ import { connect } from "react-redux";
 import ringSectionBg from "../Images/compHeaderImg/ringSection.jpg";
 import HeaderNavbar from "./HeaderNavbar/HeaderNavbar";
 import ItemBox from "./ItemBox/ItemBox";
+// import Footer from '../Components/sectionFooter/Footer'
 
 const Rings = ({ rings }) => {
-  console.log(rings);
   return (
     <Fragment>
       <HeaderNavbar background={ringSectionBg} />
-      {rings.map(ring =>  <ItemBox {...ring} />)}
+      <div className='itemBoxWrapper'>
+        {rings.map(ring => <ItemBox {...ring} />)}
+      </div>
+      {/* <Footer /> */}
     </Fragment>
   );
 };
@@ -19,7 +22,7 @@ let vercnenqProductsStatic = merReduceriStateVoreStanumaConnectic => {
     rings: merReduceriStateVoreStanumaConnectic.products.filter(product => product.category === "Ring")
   };
 };
-export default connect(vercnenqProductsStatic,)(Rings);
+export default connect(vercnenqProductsStatic)(Rings);
 
 
 //1) connect enq berum vori mej grum enq functia vorov stanum enq state reduceri meji.
