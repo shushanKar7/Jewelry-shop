@@ -5,7 +5,6 @@ import HeaderNavbar from "./HeaderNavbar/HeaderNavbar";
 import ItemBox from "./ItemBox/ItemBox";
 
 const Rings = ({ rings }) => {
-  console.log(rings);
   return (
     <Fragment>
       <HeaderNavbar background={ringSectionBg} />

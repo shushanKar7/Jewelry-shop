@@ -78,7 +78,7 @@ import necklace18 from './Images/necklaceSection/necklace18.jpg'
 class ProductMaker {
     constructor (name,price,category,image){
         this.name = name;
-        this.price = price;
+        this.price = `$${price}`;
         this.category = category;
         this.quantity = 0;
         this.isFavorite = false;
@@ -89,10 +89,10 @@ class ProductMaker {
 }
 let products = [
     // Ring Products
-    new ProductMaker('Obsidian',50,"Ring",ring1),
+    new ProductMaker('Obsidian',49,99,"Ring",ring1),
     new ProductMaker('Obsidian',50,"Ring",ring2),
     new ProductMaker('Obsidian',50,"Ring",ring3),
-    new ProductMaker('Obsidian',50,"Ring",ring4),
+    new ProductMaker('Obsidian',49+",9","Ring",ring4),
     new ProductMaker('Obsidian',50,"Ring",ring5),
     new ProductMaker('Obsidian',50,"Ring",ring6),
     new ProductMaker('Obsidian',50,"Ring",ring7),
