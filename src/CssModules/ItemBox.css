@@ -22,26 +22,41 @@ h1{
   position: relative;
 }
 .overlay{
-  width: 100%;
-  height: 70%;
+  background: rgba(0,0,0,0.7);
   position: absolute;
-  transition: 0.5s;
-  background:black;
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
   opacity: 0;
+  transition: all 0.4s ease-in-out 0s;
 }
 .overlayText{
   position: absolute;
-  left:-100px;
+  text-align: center;
+  width: 100%;
+  top: 50%;
+  left: -50%;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease-in-out 0s;
+  z-index: 99;
 }
-.overlay:hover{
-  opacity:0.3;
+.overlayText p{
+  color: white;
+  padding: 20px;
+  font-family: 'Dancing Script', cursive;
+  z-index: 9999;
+  position: relative;
 }
-.itemBox span{
+.itemBoxSpan span{
   color: #444;
   font-family: 'Dancing Script', cursive;
   font-size: 2em;
 }
-.itemBox span:last-child {
+.itemBoxSpan span:last-child {
   margin-left: 20px;
   color: #444;
   font-family: 'Dancing Script', cursive;
@@ -76,12 +91,25 @@ h1{
             align-items: center;
 }
 .itemImage {
+  overflow: hidden;
+  position: relative;
   width: 100%;
   height: 70%;
   border-radius: 5px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+}
+ .itemImage:hover .overlay{
+  opacity:0.7;
+} 
+ .itemImage:hover .overlayText{
+  top: 50%;
+  left: 50%;
+  opacity: 1;
+} 
+.fadeIn-left{
+  left: 20%;
 }
 .itemDetail {
   width: 100%;
