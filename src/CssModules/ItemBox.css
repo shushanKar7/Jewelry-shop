@@ -51,6 +51,10 @@ h1{
   z-index: 9999;
   position: relative;
 }
+.overlayText h3{
+  color: white;
+  font-family: 'Dancing Script', cursive;
+}
 .itemBoxSpan span{
   color: #444;
   font-family: 'Dancing Script', cursive;
