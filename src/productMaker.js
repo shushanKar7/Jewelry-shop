@@ -1,8 +1,8 @@
-let neckalesURLs = require.context("./Images/necklaceSection", false, /.*\.jpg$/),
+let neckalesURLs = require.context("./Images/necklaceSection", false, /.*\.jpg || .JPG$/),
     [products, necklaces, bracelets, earrnings, rings ] = [ [], [], [], [], [] ],
-    braceletsURLs = require.context ( "./Images/braceletSection", false, /.*\.jpg$/ ),
-    earringsURLs = require.context ( "./Images/earringSection", false, /.*\.jpg$/ ),
-    ringsURLs = require.context ( "./Images/ringSection", false, /.*\.jpg$/ ),
+    braceletsURLs = require.context ( "./Images/braceletSection", false, /.*\.jpg || .JPG$/ ),
+    earringsURLs = require.context ( "./Images/earringSection", false, /.*\.jpg || .JPG$/ ),
+    ringsURLs = require.context ( "./Images/ringSection", false, /.*\.jpg || .JPG$/ ),
     productDescreption = [ [], [], [], [] ];
 neckalesURLs.keys().forEach(function(key){
     necklaces[necklaces.length] = neckalesURLs(key);

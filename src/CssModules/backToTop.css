@@ -1,0 +1,19 @@
+.backToTop{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-position: center;
+    background-size: cover;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+.backToTop i{
+    color: #A6BFCE;
+    font-size: 60px;
+    transition: 0.3s;
+}
+.backToTop i:hover{
+    transform:scale(1.1);
+    color: #6D8695;
+}

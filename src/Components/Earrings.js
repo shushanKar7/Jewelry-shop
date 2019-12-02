@@ -3,6 +3,11 @@ import { connect } from "react-redux";
 import earringSectionBg from "../Images/compHeaderImg/earringSection.jpg";
 import HeaderNavbar from "./HeaderNavbar/HeaderNavbar";
 import ItemBox from "./ItemBox/ItemBox";
+import Footer from '../Components/sectionFooter/Footer';
+import { BackToTop } from "./backToTop/BackToTop";
+
+
+
 
 const Earrings = ({ earrings }) => {
   console.log(earrings);
@@ -14,6 +19,8 @@ const Earrings = ({ earrings }) => {
         <ItemBox {...earring} />
       ))}
       </div>
+      <BackToTop/>
+      <Footer/>
     </Fragment>
   );
 };

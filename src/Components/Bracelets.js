@@ -3,6 +3,10 @@ import { connect } from "react-redux";
 import braceletSectionBg from '../Images/compHeaderImg/braceletSection.jpg'
 import HeaderNavbar from "./HeaderNavbar/HeaderNavbar";
 import ItemBox from "./ItemBox/ItemBox";
+import Footer from '../Components/sectionFooter/Footer'
+import { BackToTop } from "./backToTop/BackToTop";
+
+
 
 const Bracelets = ({ bracelets }) => {
   console.log(bracelets);
@@ -12,6 +16,8 @@ const Bracelets = ({ bracelets }) => {
       <div className='itemBoxWrapper'>
       {bracelets.map(bracelet =>  <ItemBox {...bracelet} />)}
       </div>
+      <Footer/>
+      <BackToTop/>
     </Fragment>
   );
 };
