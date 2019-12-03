@@ -1,8 +1,15 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 
+
+
 const HeaderNavbar = props => {
+
+  const styleNav = {
+    textShadow: '0 0 12px white',
+    borderBottom: '2px solid white',
+  }
   return (
     <div
       className="headerNavbar"
@@ -15,7 +22,7 @@ const HeaderNavbar = props => {
     >
       <div className="accountCartBlcok">
         <i className="fa fa-user">
-          <Link className = 'routerLink' to="/SignIn">
+          <Link className='routerLink' to="/SignIn">
             <span>Sign in</span>
           </Link>
         </i>
@@ -27,37 +34,28 @@ const HeaderNavbar = props => {
         </i>
       </div>
       <Link to='/'>
-      <div className="logo"></div></Link>
+        <div className="logo"></div></Link>
 
       <div className="navBar">
         <nav>
           <ul>
-            <a>
-              <Link to ='/'>
-              <li className="effect-box">HOME</li></Link>
-            </a>
-            <a>
-              <Link to="/necklaces">
-                {" "}
-                <li className="effect-box">NECKLACES</li>
-              </Link>
-            </a>
-            <a>
-              <Link to="./rings">
-                {" "}
-                <li className="effect-box">RINGS</li>
-              </Link>
-            </a>
-            <a>
-              <Link to="./earrings">
-                <li className="effect-box">EARRINGS</li>
-              </Link>
-            </a>
-            <a>
-              <Link to="./bracelets">
-                <li className="effect-box">BRACELETS</li>
-              </Link>
-            </a>
+            <NavLink to='/'>
+              <li className="effect-box">HOME</li>
+            </NavLink>
+            <NavLink  exact activeStyle={styleNav} to="/necklaces">
+              {" "}
+              <li className="effect-box">NECKLACES</li>
+            </NavLink>
+            <NavLink  exact activeStyle={styleNav} to="/rings">
+              {" "}
+              <li className="effect-box">RINGS</li>
+            </NavLink>
+            <NavLink exact activeStyle={styleNav} to="/earrings">
+              <li className="effect-box">EARRINGS</li>
+            </NavLink>
+            <NavLink exact activeStyle={styleNav} to="/bracelets">
+              <li className="effect-box">BRACELETS</li>
+            </NavLink>
           </ul>
         </nav>
       </div>
