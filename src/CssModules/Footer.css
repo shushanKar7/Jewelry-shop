@@ -1,5 +1,4 @@
 /* Main footer */
-
 footer {
   bottom: 0;
   flex-wrap: wrap;
@@ -20,9 +19,7 @@ footer .footer-right {
 footer .footer-right {
   width: auto;
 }
-
 /* Footer left */
-
 .leftText {
   display: block;
   font-weight: bold;
@@ -40,7 +37,6 @@ footer .footer-right {
   margin-left: 3%;
   font-family: "Dancing Script", cursive;
 }
-
 .leftTextP {
   line-height: 20px;
   font-size: 13px;
@@ -49,9 +45,7 @@ footer .footer-right {
   color: #090c11;
   font-family: "Century Gothic", sans-serif;
 }
-
 /* Input field */
-
 input {
   background-color: rgba(0, 0, 0, 0);
   box-shadow: 0;
@@ -63,7 +57,6 @@ input {
   color: rgba(0, 0, 0, 0.4);
   font-family: "Varela Round";
 }
-
 input::placeholder {
   color: rgb(4, 46, 63);
   font-size: 15px;
@@ -74,16 +67,13 @@ input::placeholder {
   width: 70%;
   margin: 10px 0;
 }
-
 .footerCompanyName {
   color: #090c11;
   font-family: "Century Gothic", sans-serif;
   font-weight: normal;
   font-size: 13px;
 }
-
 /*Button*/
-
 .subscribe {
   top: 2%;
   position: relative;
@@ -97,34 +87,28 @@ input::placeholder {
   overflow: hidden;
   color: white;
 }
-
 .subscribe:hover {
   background: rgba(255, 255, 255, 0.952);
   box-shadow: 0px 2px 10px 5px rgb(4, 46, 63);
   color: #000;
 }
-
 /* Footer links */
-
 .footer-distributed .footer-links {
   color: #8f9296;
   margin: 20px 0 12px;
 }
-
 .footer-distributed .footer-links a {
   display: inline-block;
   line-height: 1.8;
   text-decoration: none;
   color: inherit;
 }
-
 .footer-distributed .footer-company-name {
   color: #8f9296;
   font-size: 14px;
   font-weight: normal;
   margin: 0;
 }
-
 /* Footer Center */
 .footer-distributed .footer-center i {
   background-color: #6d6e70;
@@ -138,25 +122,21 @@ input::placeholder {
   margin: 10px 15px 10px 0;
   vertical-align: middle;
 }
-
 .footer-distributed .footer-center i.fa-envelope {
   font-size: 14px;
   line-height: 38px;
   background-color: rgb(4, 46, 63);
 }
-
 .footer-distributed .footer-center i.fa-map-marker {
   font-size: 18px;
   line-height: 38px;
   background-color: rgb(4, 46, 63);
 }
-
 .footer-distributed .footer-center i.fa-phone {
   font-size: 16px;
   line-height: 38px;
   background-color: rgb(4, 46, 63);
 }
-
 .footer-distributed .footer-center p {
   display: inline-block;
   vertical-align: middle;
@@ -166,7 +146,6 @@ input::placeholder {
   color: #090c11;
   font-family: "Century Gothic", sans-serif;
 }
-
 .footer-distributed .footer-center p span {
   display: block;
   font-weight: normal;
@@ -175,7 +154,6 @@ input::placeholder {
   color: #090c11;
   font-family: "Century Gothic", sans-serif;
 }
-
 .footer-distributed .footer-center p a {
   color: #090c11;
   font-family: "Century Gothic", sans-serif;
@@ -184,12 +162,10 @@ input::placeholder {
   font-size: 14px;
   font-family: "Century Gothic", sans-serif;
 }
-
 .footer-distributed .footer-center div i:hover {
   opacity: 0.8;
 }
 /* Footer Right */
-
 .footer-distributed .footer-company-about {
   line-height: 25px;
   color: #090c11;
@@ -198,7 +174,6 @@ input::placeholder {
   font-weight: normal;
   margin: 0;
 }
-
 .footer-distributed .footer-company-about span {
   display: block;
   font-weight: 700;
@@ -207,15 +182,12 @@ input::placeholder {
   font-size: 26px;
   margin-bottom: 20px;
 }
-
 /* Social icons */
-
 .social {
   display: flex;
   justify-content: center;
-  padding: 10px;
+  padding:  20px 0;
 }
-
 .social .link {
   display: inline-block;
   position: relative;
@@ -228,7 +200,6 @@ input::placeholder {
   margin-left: 15px;
   font-size: 18px;
 }
-
 .social .link span {
   display: inline-block;
   position: absolute;
@@ -237,26 +208,22 @@ input::placeholder {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-
 .social .link:hover {
   transform: rotate(360deg);
 }
-
 .social .link.google-plus {
   background-color: tomato;
   color: white;
 }
-
 .social .link.twitter {
   background-color: #00acee;
   color: white;
 }
-
 .social .link.facebook {
   background-color: #3b5998;
   color: white;
+  margin-left: 0;
 }
-
 .social .link.instagram {
   background: linear-gradient(
     45deg,
@@ -268,28 +235,23 @@ input::placeholder {
   );
   color: white;
 }
-
 .social .link.youtube {
   background-color: #c4302b;
   color: white;
 }
-
 .social .link.linkedin {
   background-color: #2867b2;
   color: white;
 }
-
 .social .link.pinterest {
   background-color: #c8232c;
   color: white;
 }
-
 .style1 {
   height: 10px;
   border: 0;
   box-shadow: 0 10px 10px -10px #8c8b8b inset;
 }
-
 /* //Making full responsive with medias  */
 @media screen and (max-width: 500px) {
   .footer-right {

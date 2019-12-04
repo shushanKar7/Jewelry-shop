@@ -20,6 +20,7 @@ function ItemBox(props) {
                 <div className='itemBoxButton'>
                     <button>ADD TO CART</button>
                     <button>BUY</button>
+                    <i class="fa fa-heart"></i>
                 </div>
             </div>
         </div>

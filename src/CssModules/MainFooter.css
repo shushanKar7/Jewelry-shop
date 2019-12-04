@@ -17,14 +17,21 @@
 .fb,
 .inst,
 .twit {
-  width: 100px;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: initial;
-  padding: 5px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-clip: content-box;
+  transition: .5s;
   color: white;
-  text-align: center;
-  transition: 0.4s;
+  background: black;
+  margin-left: 55px;
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid white;
 }
 .twit:hover,
 .fb:hover,

@@ -7,6 +7,8 @@ h1 {
   display: -ms-flexbox;
   display: flex;
   position: relative;
+  top: 5%;
+  padding-bottom: 4%;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -webkit-box-pack: center;
@@ -15,7 +17,7 @@ h1 {
 }
 .itemBox {
   width: 445px;
-  height: 365px;
+  height: 495px;
   border: 7px solid #fff;
   border-radius: 5px;
   margin: 50px;
@@ -71,14 +73,24 @@ h1 {
   margin-right: 20px;
 }
 .itemBoxButton button {
-  font-family: "Quattrocento", serif;
   background: #a6bfce;
   color: #444;
-  font-weight: bold;
   transition: 0.3s;
   outline: none;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 15px;
+  font-family: "Century Gothic",sans-serif;
+  font-weight: 500;
+}
+
+.itemDetail .itemBoxButton i {
+  font-size: 2em;
+  text-shadow: 0 0 3px rgb(1, 24, 51);
+  cursor: pointer;
+  color: rgba(135, 161, 190, 0.938)
+}
+.itemDetail .itemBoxButton i:hover {
+  color: rgba(79, 105, 134, 0.938);
 }
 .itemBoxButton button:hover {
   background: #6d8695;
@@ -123,7 +135,6 @@ h1 {
 .itemDetail button {
   width: 132px;
   padding: 11px 12px;
-  border-radius: 5px;
 }
 .itemDetail i {
   color: rgb(182, 47, 47);
