@@ -52,7 +52,9 @@ const Footer = () => {
             Friendship, Serenity & Calmness and <br/> many more! Each intention
             gathers a selection of <br/> gemstones to attract a specific energy. 
           </p>
-          <div class="social">
+        </div>
+        </footer>
+        <div class="social">
             <a class="link facebook" target="_parent">
               <span class="fa fa-facebook-square"></span>
             </a>
@@ -72,8 +74,7 @@ const Footer = () => {
               <span class="fa fa-pinterest"></span>
             </a>
           </div>
-        </div>
-      </footer>
+    
     </Fragment>
   );
 };

@@ -180,7 +180,7 @@ nav li.effect-box:hover:before {
   }
 }
 
-@media screen and (max-width: 600px){
+@media screen and (max-width: 900px){
   .logo{
     width: 158px;
     height: 104px;
