@@ -9,6 +9,7 @@ import Rings from "./Rings";
 import Necklaces from "../Components/Necklaces";
 import Bracelets from "./Bracelets";
 import Earrings from "./Earrings";
+import ChristmasHeader from './Christmas/ChristmasHeader'
 
 class App extends Component {
   render() {
@@ -16,6 +17,7 @@ class App extends Component {
       <Router>
         <div className="container">
           <Switch>
+            <Route path="/christmas" component={ChristmasHeader}></Route>
             <Route exact path="/" component={SlideShow}></Route>
             <Route path="/SignUp" component={SignUp}></Route>
             <Route path="/SignIn" component={SignIn}></Route>
