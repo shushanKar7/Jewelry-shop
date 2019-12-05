@@ -1,11 +1,10 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-
-
+import MerryChristmas from "../Christmas/MerryChristmas"
+import Christmas from "../Christmas/MerryChristmas";
 
 const HeaderNavbar = props => {
-
   const styleNav = {
     textShadow: '0 0 12px white',
     borderBottom: '2px solid white',
@@ -34,19 +33,22 @@ const HeaderNavbar = props => {
         </i>
       </div>
       <Link to='/'>
-        <div className="logo"></div></Link>
-
+        <div className="logo"></div>
+      </Link>
+      <Link to = "/christmas">
+      <Christmas/>
+      </Link>
       <div className="navBar">
         <nav>
           <ul>
             <NavLink to='/'>
               <li className="effect-box">HOME</li>
             </NavLink>
-            <NavLink  exact activeStyle={styleNav} to="/necklaces">
+            <NavLink exact activeStyle={styleNav} to="/necklaces">
               {" "}
               <li className="effect-box">NECKLACES</li>
             </NavLink>
-            <NavLink  exact activeStyle={styleNav} to="/rings">
+            <NavLink exact activeStyle={styleNav} to="/rings">
               {" "}
               <li className="effect-box">RINGS</li>
             </NavLink>
