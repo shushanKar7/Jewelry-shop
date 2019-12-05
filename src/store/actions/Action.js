@@ -1,4 +1,10 @@
-export const ADD_TO_FAVORITE = 'ADD_TO_FAVORITE';
+const jewelryLoaded = (newJewelry) => {
+    return {
+        type: 'JEWELRY-LOADED',
+        payload: newJewelry
+    }
+}
 
-export const addToFavorite = (id) => ({type:ADD_TO_FAVORITE,id}); //{id:id}
-
+export {
+    jewelryLoaded
+} 

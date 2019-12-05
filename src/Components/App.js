@@ -9,7 +9,8 @@ import Rings from "./Rings";
 import Necklaces from "../Components/Necklaces";
 import Bracelets from "./Bracelets";
 import Earrings from "./Earrings";
-import ChristmasHeader from './Christmas/ChristmasHeader'
+import ChristmasHeader from './Christmas/ChristmasHeader';
+import { JewelrystoreService } from '../services/jewelry-service'
 
 class App extends Component {
   render() {
