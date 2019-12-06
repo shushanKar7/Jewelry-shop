@@ -1,6 +1,5 @@
 import React from 'react';
 function ItemBox(props) {
-    console.log(props.image)
     return (
         <div className="itemBox">
             <div className="itemImage" style={{ backgroundImage: `url(${props.image})` }}>
@@ -18,9 +17,11 @@ function ItemBox(props) {
                     <span>{props.price}</span>
                 </div>
                 <div className='itemBoxButton'>
-                    <button>ADD TO CART</button>
+                    <button onClick={props.onAddedToCart}>
+                        ADD TO CART
+                        </button>
                     <button>BUY</button>
-                    <i class="fa fa-heart"></i>
+                    <i className="fa fa-heart"></i>
                 </div>
             </div>
         </div>

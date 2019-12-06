@@ -4,7 +4,7 @@ import { Fragment } from "react";
 const Footer = () => {
   return (
     <Fragment>
-      <hr class="style1"></hr>
+      <hr className="style1"></hr>
       <footer className="footer-distributed">
         <div className="footer-left">
           <span className="leftText">Get in Touch</span>
@@ -52,24 +52,24 @@ const Footer = () => {
             Friendship, Serenity & Calmness and <br/> many more! Each intention
             gathers a selection of <br/> gemstones to attract a specific energy. 
           </p>
-          <div class="social">
-            <a class="link facebook" target="_parent">
-              <span class="fa fa-facebook-square"></span>
+          <div className="social">
+            <a className="link facebook" target="_parent">
+              <span className="fa fa-facebook-square"></span>
             </a>
             <a className="link twitter" target="_parent">
               <span className="fa fa-twitter"></span>
             </a>
-            <a class="link instagram" target="_parent">
-              <span class="fa fa-instagram"></span>
+            <a className="link instagram" target="_parent">
+              <span className="fa fa-instagram"></span>
             </a>
-            <a class="link youtube" target="_parent">
-              <span class="fa fa-youtube"></span>
+            <a className="link youtube" target="_parent">
+              <span className="fa fa-youtube"></span>
             </a>
-            <a class="link linkedin" target="_parent">
-              <span class="fa fa-linkedin"></span>
+            <a className="link linkedin" target="_parent">
+              <span className="fa fa-linkedin"></span>
             </a>
-            <a class="link pinterest" target="_parent">
-              <span class="fa fa-pinterest"></span>
+            <a className="link pinterest" target="_parent">
+              <span className="fa fa-pinterest"></span>
             </a>
           </div>
         </div>

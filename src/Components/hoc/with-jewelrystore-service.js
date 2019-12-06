@@ -1,5 +1,5 @@
 import React from 'react'
-import JewelryServiceConsumer from '../jewelry-service-context/jewelry-service-context'
+import { JewelryServiceConsumer } from '../jewelry-service-context/jewelry-service-context'
 
 const withJewelrystoreService = () => (Wrapped) => {
     return (props) => {

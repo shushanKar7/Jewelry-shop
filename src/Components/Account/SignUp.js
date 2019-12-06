@@ -48,13 +48,13 @@ const validEmailRegex = RegExp(
                value.length < 8 || value.length > 12 ? "Password must be 8-12 characters long!" : "";
            break;
        }
-       {if(this.state.password !== this.state.confirmPassword){
-         this.state.user = "Passwords didn't match"
-       }else{
-         this.setState({
-           account: true
-         })
-       }}
+      //  {if(this.state.password.value !== this.state.confirmPassword.value){
+      //    this.state.user = "Passwords didn't match"
+      //  }else{
+      //    this.setState({
+      //      account: true
+      //    })
+      //  }}
        this.setState({ errors, [name]: value });
     };
     generateInput =  ( input = "" ) => {

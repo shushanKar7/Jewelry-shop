@@ -16,7 +16,7 @@ ringsURLs.keys().forEach(function(key){
 earringsURLs.keys().forEach(function(key){
     earrnings[earrnings.length] = earringsURLs(key);
 });
-let id = 0;
+let id = 1;
 class ProductMaker {
     constructor (name,price,category,image){
         this.name = name;
@@ -32,7 +32,6 @@ for ( let i = 0; i < necklaces.length; i++ ) {
     products[products.length] = new ProductMaker('Obsidian',50,"Ring", rings[i]);
     products[products.length] = new ProductMaker('Amber',79,"Earring", earrnings[i]);
     products[products.length] = new ProductMaker('Bloodstone',87,"Necklace", necklaces[i]);
-    console.log(necklaces[i])
     products[products.length] = new ProductMaker('Andalusite',50,"Bracelet", bracelets[i]);
 }
 export default products;

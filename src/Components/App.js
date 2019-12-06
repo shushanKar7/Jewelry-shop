@@ -9,11 +9,13 @@ import Rings from "./Rings";
 import Necklaces from "../Components/Necklaces";
 import Bracelets from "./Bracelets";
 import Earrings from "./Earrings";
+import { CartPage } from './pages/cart-page'
 import ChristmasHeader from './Christmas/ChristmasHeader';
-import { JewelrystoreService } from '../services/jewelry-service'
+// import { JewelrystoreService } from '../services/jewelry-service'
+import  withJewelrystoreService  from './hoc/with-jewelrystore-service'
 
-class App extends Component {
-  render() {
+const App = ({ jewelrystoreService }) => {
+  console.log(jewelrystoreService.getJewelry())
     return (
       <Router>
         <div className="container">
@@ -32,13 +34,5 @@ class App extends Component {
       </Router>
     );
   }
-}
 
-let mapStateToProps = state => {
-  return {
-    openSignIn: state.openSignIn,
-    sectionName: state.sectionName
-  };
-};
-
-export default connect(mapStateToProps)(App);
+export default withJewelrystoreService()(App);
