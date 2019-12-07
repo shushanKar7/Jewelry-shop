@@ -12,8 +12,8 @@ const reducer = (state=initialState,action) => {
                 jewelry: action.payload
             };
         case 'JEWELRY_ADDED_TO_CART' :
-            const jewelryId = action.payload;
-            const jewelry = state.jewelry.find((jewelry) => jewelry.id === jewelryId)
+            // const jewelryId = action.payload;
+            // const jewelry = state.jewelry.find((jewelry) => jewelry.id === jewelryId)
             return {
                ...state
             }

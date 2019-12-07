@@ -1,11 +1,11 @@
-import React, { Component, Fragment } from "react";
+import React, { Fragment } from "react";
 import { connect } from "react-redux";
 import ringSectionBg from "../Images/compHeaderImg/ringSection.jpg";
 import HeaderNavbar from "./HeaderNavbar/HeaderNavbar";
 import ItemBox from "./ItemBox/ItemBox";
 import Footer from '../Components/sectionFooter/Footer'
 import { BackToTop } from "./backToTop/BackToTop";
-import { jewelryAddedToCart } from '../store/actions/action'
+// import { jewelryAddedToCart } from '../store/actions/action'
 
 const Rings = ({ rings, onAddedToCart }) => {  
   let id = 1;

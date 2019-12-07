@@ -1,7 +1,7 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-import MerryChristmas from "../Christmas/MerryChristmas"
+// import MerryChristmas from "../Christmas/MerryChristmas"
 import Christmas from "../Christmas/MerryChristmas";
 
 const HeaderNavbar = props => {

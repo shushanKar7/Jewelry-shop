@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react';
+import React, { Fragment } from 'react';
 import HeaderNavbar from './HeaderNavbar/HeaderNavbar';
 import NeacklaceSectionBg from "../Images/compHeaderImg/necklaceSection.jpg";
 import { connect } from 'react-redux';
@@ -26,7 +26,7 @@ let vercnenqProductsStatic = merReduceriStateVoreStanumaConnectic =>{
 
 
     return{
-        necklaces:merReduceriStateVoreStanumaConnectic.products.filter(product=>product.category=='Necklace')
+        necklaces:merReduceriStateVoreStanumaConnectic.products.filter(product=>product.category==='Necklace')
     }
 }
 

@@ -73,27 +73,28 @@ h1 {
   margin-right: 20px;
 }
 .itemBoxButton button {
-  background: #a6bfce;
-  color: #444;
+  background: #4b6473;
+  color: #eae6e6;
   transition: 0.3s;
   outline: none;
   cursor: pointer;
-  font-size: 15px;
+  font-weight: 600;
+  font-size: 13px;
   font-family: "Century Gothic",sans-serif;
-  font-weight: 500;
+  font-weight: 700;
 }
 
 .itemDetail .itemBoxButton i {
-  font-size: 2em;
-  text-shadow: 0 0 3px rgb(1, 24, 51);
-  cursor: pointer;
-  color: rgba(135, 161, 190, 0.938)
+  font-size: 1.4em;
+    text-shadow: 0 0 3px rgb(1, 24, 51);
+    cursor: pointer;
+    color: #ffffff;
 }
 .itemDetail .itemBoxButton i:hover {
   color: rgba(79, 105, 134, 0.938);
 }
 .itemBoxButton button:hover {
-  background: #6d8695;
+  background: #274354;
   color: rgb(240, 238, 238);
 }
 .itemBoxSpan {
@@ -116,6 +117,7 @@ h1 {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  cursor: pointer;
 }
 .itemImage:hover .overlay {
   opacity: 0.7;

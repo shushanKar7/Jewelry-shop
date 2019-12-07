@@ -11,10 +11,10 @@ const MainFooter = () => {
           href="https://www.facebook.com/SS-Armenian-Brand-102956644511223/?modal=admin_todo_tour"
           target="_blank"
         >
-          <span class="fa fa-facebook-square"></span>
+          <span className="fa fa-facebook-square"></span>
         </a>
         <a className="inst" href="https://www.instagram.com/s_s_armenian_brand5/" target="_blank">
-        <span class="fa fa-instagram"></span>
+        <span className="fa fa-instagram"></span>
 
         </a>
       </ul>

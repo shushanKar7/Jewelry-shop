@@ -1,15 +1,15 @@
-import React, { Component, Fragment } from "react";
+import React from "react";
 import "../index.css";
 import SlideShow from "./SlideShow/SlideShow";
 import SignIn from "./Account/SignIn";
 import SignUp from "./Account/SignUp";
-import { connect } from "react-redux";
+// import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Rings from "./Rings";
 import Necklaces from "../Components/Necklaces";
 import Bracelets from "./Bracelets";
 import Earrings from "./Earrings";
-import { CartPage } from './pages/cart-page'
+// import { CartPage } from './pages/cart-page'
 import ChristmasHeader from './Christmas/ChristmasHeader';
 // import { JewelrystoreService } from '../services/jewelry-service'
 import  withJewelrystoreService  from './hoc/with-jewelrystore-service'
