@@ -28,11 +28,10 @@
   transition: .5s;
   color: white;
   background: black;
+  margin-left: 55px;
   font-size: 18px;
   text-decoration: none;
   border: 1px solid white;
-  margin: 20px;
-
 }
 .twit:hover,
 .fb:hover,

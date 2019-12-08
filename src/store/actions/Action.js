@@ -1,17 +1,4 @@
-const jewelryLoaded = (newJewelry) => {
-    return {
-        type: 'JEWELRY-LOADED',
-        payload: newJewelry
-    }
-}
+export const ADD_TO_FAVORITE = 'ADD_TO_FAVORITE';
 
-export {
-    jewelryLoaded
-} 
+export const addToFavorite = (id) => ({type:ADD_TO_FAVORITE,id}); //{id:id}
 
-export const jewelryAddedToCart = (jwelryId) => {
-    return {
-        type: 'JEWELRY_ADDED_TO_CART',
-        payload: jwelryId
-    }
-}

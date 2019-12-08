@@ -2,8 +2,8 @@ let neckalesURLs = require.context("./Images/necklaceSection", false, /.*\.jpg |
     [products, necklaces, bracelets, earrnings, rings ] = [ [], [], [], [], [] ],
     braceletsURLs = require.context ( "./Images/braceletSection", false, /.*\.jpg || .JPG$/ ),
     earringsURLs = require.context ( "./Images/earringSection", false, /.*\.jpg || .JPG$/ ),
-    ringsURLs = require.context ( "./Images/ringSection", false, /.*\.jpg || .JPG$/ ),
-    productDescreption = [ [], [], [], [] ];
+    ringsURLs = require.context ( "./Images/ringSection", false, /.*\.jpg || .JPG$/ );
+    // productDescreption = [ [], [], [], [] ];
 neckalesURLs.keys().forEach(function(key){
     necklaces[necklaces.length] = neckalesURLs(key);
 });
@@ -16,7 +16,7 @@ ringsURLs.keys().forEach(function(key){
 earringsURLs.keys().forEach(function(key){
     earrnings[earrnings.length] = earringsURLs(key);
 });
-let id = 1;
+let id = 0;
 class ProductMaker {
     constructor (name,price,category,image){
         this.name = name;
@@ -25,6 +25,7 @@ class ProductMaker {
         this.isFavorite = false;
         this.onCart = false;
         this.image = image;
+        this.quantity = 0;
         this.id = id++;
     }
 }

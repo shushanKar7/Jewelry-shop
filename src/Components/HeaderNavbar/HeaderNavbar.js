@@ -1,14 +1,13 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
-// import MerryChristmas from "../Christmas/MerryChristmas"
-import Christmas from "../Christmas/MerryChristmas";
+import Christmas from '../Merry Christmas/Christmas'
 
 const HeaderNavbar = props => {
   const styleNav = {
-    textShadow: '0 0 12px white',
-    borderBottom: '2px solid white',
-  }
+    textShadow: "0 0 12px white",
+    borderBottom: "2px solid white"
+  };
   return (
     <div
       className="headerNavbar"
@@ -21,18 +20,20 @@ const HeaderNavbar = props => {
     >
       <div className="accountCartBlcok">
         <i className="fa fa-user">
-          <Link className='routerLink' to="/SignIn">
+          <Link className="routerLink" to="/SignIn">
             <span>Sign in</span>
           </Link>
         </i>
         <i className="fa fa-heart">
           <span>Saved Items</span>
         </i>
-        <i className="fa fa-shopping-cart">
-          <span>Cart</span>
-        </i>
+        <Link to="/cart">
+          <i className="fa fa-shopping-cart">
+            <span>Cart</span>
+          </i>
+        </Link>
       </div>
-      <Link to='/'>
+      <Link to="/">
         <div className="logo"></div>
       </Link>
       <Link to = "/christmas">
@@ -41,7 +42,7 @@ const HeaderNavbar = props => {
       <div className="navBar">
         <nav>
           <ul>
-            <NavLink to='/'>
+            <NavLink to="/">
               <li className="effect-box">HOME</li>
             </NavLink>
             <NavLink exact activeStyle={styleNav} to="/necklaces">

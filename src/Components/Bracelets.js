@@ -9,12 +9,12 @@ import { BackToTop } from "./backToTop/BackToTop";
 
 
 const Bracelets = ({ bracelets }) => {
-  console.log(bracelets);
+  let id = 1;
   return (
     <Fragment>
       <HeaderNavbar background={braceletSectionBg} />
       <div className='itemBoxWrapper'>
-      {bracelets.map(bracelet =>  <ItemBox {...bracelet} />)}
+      {bracelets.map(bracelet =>  <ItemBox key = {id++} {...bracelet} />)}
       </div>
       <Footer/>
       <BackToTop/>
