@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 //import { addShipping } from './actions/cartActions'
 
@@ -12,26 +12,31 @@ class Recipe extends Component {
   };
   render() {
     return (
-      <div className="container">
+      <Fragment>
         <div className="collection">
           <li className="collection-item">
             <label>
-              <input
+              {/* <input
                 type="checkbox"
                 ref="shipping"
                 onChange={this.handleChecked}
-              />
+              /> */}
+<div>
+  <input onChange={this.handleChecked} ref="shipping" type="checkbox" id="check" name="check"  />
+  <label    onChange={this.handleChecked} for="check"></label>
+</div>
               <span>Shipping and taxes calculated at checkout(+6$)</span>
             </label>
           </li>
           <li className="collection-item">
             <div>Total: {this.props.total} $</div>
           </li>
+          <div className="checkout">
+            <button className="checkoutButton">Checkout</button>
+          </div>
         </div>
-        <div className="checkout">
-          <button className="checkoutButton">Checkout</button>
-        </div>
-      </div>
+
+      </Fragment>
     );
   }
 }

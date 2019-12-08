@@ -1,14 +1,17 @@
-import React from "react";
+import React, { Fragment } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import Christmas from '../Merry Christmas/Christmas'
+import Cart from '../Cart'
 
 const HeaderNavbar = props => {
+
   const styleNav = {
     textShadow: "0 0 12px white",
     borderBottom: "2px solid white"
   };
   return (
+    <Fragment>
     <div
       className="headerNavbar"
       style={{
@@ -24,20 +27,21 @@ const HeaderNavbar = props => {
             <span>Sign in</span>
           </Link>
         </i>
-        <i className="fa fa-heart">
+        <i
+          className="fa fa-heart">
           <span>Saved Items</span>
         </i>
-        <Link to="/cart">
-          <i className="fa fa-shopping-cart">
-            <span>Cart</span>
-          </i>
-        </Link>
+        {/* <Link to="/cart"> */}
+        <i className="fa fa-shopping-cart">
+          <span>Cart</span>
+        </i>
+        {/* </Link> */}
       </div>
       <Link to="/">
         <div className="logo"></div>
       </Link>
-      <Link to = "/christmas">
-      <Christmas/>
+      <Link to="/christmas">
+        <Christmas />
       </Link>
       <div className="navBar">
         <nav>
@@ -61,9 +65,12 @@ const HeaderNavbar = props => {
             </NavLink>
           </ul>
         </nav>
+
       </div>
       <div className="hr"></div>
     </div>
+    <Cart />
+    </Fragment>
   );
 };
 

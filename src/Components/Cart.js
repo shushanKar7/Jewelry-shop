@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
 import Recipe from "../Components/Recipe";
+
 import {
   removeItem,
   addQuantity,
@@ -9,6 +10,7 @@ import {
 } from "../store/actions/cartActions";
 
 class Cart extends Component {
+
   //to remove the item completely
   handleRemove = id => {
     this.props.removeItem(id);
@@ -21,6 +23,7 @@ class Cart extends Component {
   handleSubtractQuantity = id => {
     this.props.subtractQuantity(id);
   };
+  
   render() {
     let addedItems = this.props.products.length ? (
       this.props.products.map(product => {
@@ -39,22 +42,22 @@ class Cart extends Component {
                 <b>Quantity: {product.quantity}</b>
               </p>
               <div className="add-remove">
-                <Link to="/cart">
+                {/* <Link to="/cart"> */}
                   <i
                     className="fa fa-angle-up"
                     onClick={() => {
                       this.handleAddQuantity(product.id);
                     }}
                   ></i>
-                </Link>
-                <Link to="/cart">
+                {/* </Link> */}
+                {/* <Link to="/cart"> */}
                   <i
                     className="fa fa-angle-down"
                     onClick={() => {
                       this.handleSubtractQuantity(product.id);
                     }}
                   ></i>
-                </Link>
+                {/* </Link> */}
               </div>
               <button
                 className="removeButton"
@@ -72,11 +75,9 @@ class Cart extends Component {
       <p>You don't have any items in your cart yet.</p>
     );
     return (
-      <div className="container">
-        <div className="cart">
+        <div className = "cart" >
           <h1>YOUR CART</h1>
           <ul className="collection">{addedItems}</ul>
-        </div>
         <Recipe />
       </div>
     );
