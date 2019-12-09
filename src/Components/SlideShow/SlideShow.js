@@ -19,6 +19,8 @@ const properties = {
 const Slideshow = () => {
   return (
     <div className="containerSlide" >
+        <HeaderNavbar />
+        <MainFooter />
       
       <Slide {...properties}>
         {images.map((image, index) => {
@@ -29,8 +31,6 @@ const Slideshow = () => {
                   className={"image"}
                   style={{ backgroundImage: `url(${image})` }}
                 >
-                  <HeaderNavbar />
-                  <MainFooter />
                 </div>
               </div>
             </div>

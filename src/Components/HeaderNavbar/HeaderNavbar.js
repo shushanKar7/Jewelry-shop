@@ -69,7 +69,7 @@ const HeaderNavbar = props => {
       </div>
       <div className="hr"></div>
     </div>
-    <Cart />
+    {/* <Cart /> */}
     </Fragment>
   );
 };

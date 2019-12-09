@@ -1,4 +1,4 @@
-@import "HeaderNavbar.css";
+    @import "HeaderNavbar.css";
 @import "Account.css";
 @import "ItemBox.css";
 @import "MainFooter.css";
@@ -6,58 +6,90 @@
 @import "backToTop.css";
 @import 'Cart.css';
 @import 'Christmas.css';
-
 * {
-  margin: 0;
-  padding: 0;
-  border: none;
+    margin: 0;
+    padding: 0;
+    border: none;
 }
+
 html,
 body,
 .container {
-  width: 100%;
-  height: 100vh;
-  scroll-behavior: smooth;
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
 }
-.containerSlide {
-  background: rgba(0, 0, 0, 0.966);
-  width: 100vw;
-  height: 100vh;
+                    /* //CSS FOR SLIDESHOW */
+                    /* //CSS FOR SLIDESHOW */
+ .containerSlide {
+    background: rgba(0, 0, 0, 0.966);
+    width: 100vw;
+    height: 100vh;
 }
 
 .containerSlide .image {
-  height: 95vh;
-  width: 100%;
-  background-size: cover;
-  background-position: center;
-  filter: brightness(85%);
+    height: 95vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(85%);
 }
 
 
-
-
-body::-webkit-scrollbar-track,.cart::-webkit-scrollbar-track
-{
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
-	border-radius: 10px;
-	background-color: #F5F5F5;
+.react-slideshow-wrapper.slide {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    z-index: 0;
 }
 
-body::-webkit-scrollbar,.cart::-webkit-scrollbar
-{
-	width: 12px;
-	background-color: #F5F5F5;
+.react-slideshow-container .nav:last-of-type {
+    margin-left: -30px;
+    position: absolute;
+    right: 0;
 }
 
-body::-webkit-scrollbar-thumb,.cart::-webkit-scrollbar-thumb
-{
-	border-radius: 10px;
-	-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
-  background: #0F2027;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #2C5364, #203A43, #0F2027); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+.react-slideshow-container+div.indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
 }
-body::-webkit-scrollbar-thumb:hover,.cart::-webkit-scrollbar-thumb:hover{
-  background: linear-gradient(to right, rgb(35, 66, 80), rgb(27, 49, 56), rgb(13, 28, 34)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 
+                                /* CSS FOR SCROLL */
+                                /* CSS FOR SCROLL */
+
+body::-webkit-scrollbar-track,
+.cart::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
 }
+
+body::-webkit-scrollbar,
+.cart::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+body::-webkit-scrollbar-thumb,
+.cart::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background: #0F2027;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #2C5364, #203A43, #0F2027);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+body::-webkit-scrollbar-thumb:hover,
+.cart::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to right, rgb(35, 66, 80), rgb(27, 49, 56), rgb(13, 28, 34));
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
