@@ -4,7 +4,7 @@ import { Fragment } from "react";
 const Footer = () => {
   return (
     <Fragment>
-      <hr class="style1"></hr>
+      <hr className="style1"></hr>
       <footer className="footer-distributed">
         <div className="footer-left">
           <span className="leftText">Get in Touch</span>
