@@ -120,7 +120,10 @@
   transition: 0.3s;
   color: black;
   border-left: 2px solid rgba(4, 46, 63, 0.74);
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7a1ee5a5782d512838bcc737800a587abe3cede0
 }
 @keyframes openPopUp {
   from {
@@ -149,7 +152,11 @@
 }
 
 .cart img {
+<<<<<<< HEAD
   width: 130px;
+=======
+  width: 150px;
+>>>>>>> 7a1ee5a5782d512838bcc737800a587abe3cede0
   border-radius: 3px;
   box-shadow: 0 0 3px white;
 }

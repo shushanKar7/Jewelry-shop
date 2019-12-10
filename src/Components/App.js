@@ -11,7 +11,10 @@ import Bracelets from "./Bracelets";
 import Earrings from "./Earrings";
 import ChristmasSection from "./Merry Christmas/ChristmasSection";
 import Cart from "./Cart";
+<<<<<<< HEAD
 import mainProduct from "./ProductDescription/mainProduct";
+=======
+>>>>>>> 7a1ee5a5782d512838bcc737800a587abe3cede0
 
 class App extends Component {
   render() {
@@ -19,7 +22,10 @@ class App extends Component {
       <Router>
         <div className="container">
           <Switch>
+<<<<<<< HEAD
             <Route path="/products" component={mainProduct}></Route>
+=======
+>>>>>>> 7a1ee5a5782d512838bcc737800a587abe3cede0
             <Route exact path="/cart" component={Cart}></Route>
             <Route path="/christmas" component={ChristmasSection}></Route>
             <Route exact path="/" component={SlideShow}></Route>

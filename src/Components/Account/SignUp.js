@@ -148,7 +148,7 @@ class SignUp extends Component {
                     required
                     name="surname"
                     id="surname"
-                    value={null}
+                    value=''
                     placeholder="Enter Your Surname"
                     onChange={this.handleChange}
                   />
@@ -196,7 +196,7 @@ class SignUp extends Component {
                   <button onClick = {this.handleSubmit} className="submit">Sign Up</button>
                 </div>
               </form>
-              <p>Already have an account? <Link to='/SignIn'><a className="changer" href="#">Sign in</a></Link> </p>
+              <p>Already have an account? <Link to='/SignIn'><a className="changer" >Sign in</a></Link> </p>
             </div>
           </div>
         </div>
