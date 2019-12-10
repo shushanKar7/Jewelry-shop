@@ -5,16 +5,14 @@ import HeaderNavbar from "./HeaderNavbar/HeaderNavbar";
 import ItemBox from "./ItemBox/ItemBox";
 import Footer from '../Components/sectionFooter/Footer'
 import { BackToTop } from "./backToTop/BackToTop";
-// import { jewelryAddedToCart } from '../store/actions/action'
 
-const Rings = ({ rings, onAddedToCart }) => {  
+const Rings = ({ rings }) => {
   let id = 1;
   return (
     <Fragment>
       <HeaderNavbar background={ringSectionBg} />
       <div className='itemBoxWrapper'>
-        {rings.map((ring) =>
-        <ItemBox key = {id++} {...ring} onAddedToCart={() => onAddedToCart(ring.id)} />)}
+        {rings.map(ring => <ItemBox key = {id++} {...ring} />)}
       </div>
       <BackToTop/>
       <Footer />
@@ -22,15 +20,14 @@ const Rings = ({ rings, onAddedToCart }) => {
   );
 };
 
-let vercnenqProductsStatic = merReduceriStateVoreStanumaConnectic => {
+const mapStateToProps = state => {
   return {
-    rings: merReduceriStateVoreStanumaConnectic.products.filter(product => product.category === "Ring"),
-    onAddedToCart: (id) => {
-      console.log('Added to cart',id)
-    }
+    rings: state.products.filter(product => product.category === "Ring")
   };
 };
-export default connect(vercnenqProductsStatic,)(Rings);
+
+
+export default connect(mapStateToProps,{})(Rings);
 
 
 //1) connect enq berum vori mej grum enq functia vorov stanum enq state reduceri meji.

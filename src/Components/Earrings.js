@@ -10,13 +10,13 @@ import { BackToTop } from "./backToTop/BackToTop";
 
 
 const Earrings = ({ earrings }) => {
-  console.log(earrings);
+let id = 1;
   return (
     <Fragment>
       <HeaderNavbar background={earringSectionBg} />
       <div className='itemBoxWrapper'>
       {earrings.map(earring => (
-        <ItemBox {...earring} />
+        <ItemBox key = {id++} {...earring} />
       ))}
       </div>
       <BackToTop/>

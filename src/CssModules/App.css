@@ -4,13 +4,14 @@
 @import "MainFooter.css";
 @import "Footer.css";
 @import "backToTop.css";
-@import "ChristmasLogo.css";
-
+@import "Cart.css";
+@import "Christmas.css";
 * {
   margin: 0;
   padding: 0;
   border: none;
 }
+
 html,
 body,
 .container {
@@ -18,6 +19,8 @@ body,
   height: 100vh;
   scroll-behavior: smooth;
 }
+/* //CSS FOR SLIDESHOW */
+/* //CSS FOR SLIDESHOW */
 .containerSlide {
   background: rgba(0, 0, 0, 0.966);
   width: 100vw;
@@ -30,4 +33,62 @@ body,
   background-size: cover;
   background-position: center;
   filter: brightness(85%);
+}
+
+.react-slideshow-wrapper.slide {
+  width: 100%;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  z-index: 0;
+}
+
+.react-slideshow-container .nav:last-of-type {
+  margin-left: -30px;
+  position: absolute;
+  right: 0;
+}
+
+.react-slideshow-container + div.indicators {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  bottom: 3%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* CSS FOR SCROLL */
+/* CSS FOR SCROLL */
+body::-webkit-scrollbar-track,
+.cart::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #f5f5f5;
+}
+body::-webkit-scrollbar,
+.cart::-webkit-scrollbar {
+  width: 12px;
+  background-color: #f5f5f5;
+}
+body::-webkit-scrollbar-thumb,
+.cart::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background: #0f2027;
+  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2c5364, #203a43, #0f2027);
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+body::-webkit-scrollbar-thumb:hover,
+.cart::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(
+    to right,
+    rgb(35, 66, 80),
+    rgb(27, 49, 56),
+    rgb(13, 28, 34)
+  );
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
 }

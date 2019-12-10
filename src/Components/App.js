@@ -1,26 +1,27 @@
-import React from "react";
+import React, { Component } from "react";
 import "../index.css";
 import SlideShow from "./SlideShow/SlideShow";
 import SignIn from "./Account/SignIn";
 import SignUp from "./Account/SignUp";
-// import { connect } from "react-redux";
+import { connect } from "react-redux";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Rings from "./Rings";
 import Necklaces from "../Components/Necklaces";
 import Bracelets from "./Bracelets";
 import Earrings from "./Earrings";
-// import { CartPage } from './pages/cart-page'
-import ChristmasHeader from './Christmas/ChristmasHeader';
-// import { JewelrystoreService } from '../services/jewelry-service'
-import  withJewelrystoreService  from './hoc/with-jewelrystore-service'
+import ChristmasSection from "./Merry Christmas/ChristmasSection";
+import Cart from "./Cart";
+import mainProduct from "./ProductDescription/mainProduct";
 
-const App = ({ jewelrystoreService }) => {
-  console.log(jewelrystoreService.getJewelry())
+class App extends Component {
+  render() {
     return (
       <Router>
         <div className="container">
           <Switch>
-            <Route path="/christmas" component={ChristmasHeader}></Route>
+            <Route path="/products" component={mainProduct}></Route>
+            <Route exact path="/cart" component={Cart}></Route>
+            <Route path="/christmas" component={ChristmasSection}></Route>
             <Route exact path="/" component={SlideShow}></Route>
             <Route path="/SignUp" component={SignUp}></Route>
             <Route path="/SignIn" component={SignIn}></Route>
@@ -34,5 +35,13 @@ const App = ({ jewelrystoreService }) => {
       </Router>
     );
   }
+}
 
-export default withJewelrystoreService()(App);
+let mapStateToProps = state => {
+  return {
+    openSignIn: state.openSignIn,
+    sectionName: state.sectionName
+  };
+};
+
+export default connect(mapStateToProps)(App);

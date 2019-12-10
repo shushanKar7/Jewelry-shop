@@ -1,10 +1,9 @@
-import React from 'react';
-import { Fragment } from 'react'
+import React, { Fragment } from 'react'
 
 const Christmas = () => {
     return (
         <Fragment>
-            <div className="christmasWrapper">
+             <div className="christmasWrapper">
                 <div className="christmasLogo"></div>
                 <div className="christmasText"> Merry Christmas</div>
             </div>

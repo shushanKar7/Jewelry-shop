@@ -4,18 +4,16 @@ import "./index.css";
 import App from "./Components/App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
-import store from './store'
-import JewelrystoreService from './services/jewelry-service'
-import { JewelrystoreServiceProvider }  from './Components/jewelry-service-context/jewelry-service-context';
- 
-const jewelrystoreService = new JewelrystoreService()
+import { createStore } from "redux";
+import cartReducer from './store/reducers/productReducer'
 
+
+
+let store = createStore(cartReducer);
 
 ReactDOM.render(
   <Provider store={store}>
-    <JewelrystoreServiceProvider value={jewelrystoreService}>
     <App />
-    </JewelrystoreServiceProvider>
   </Provider>,
   document.getElementById("root")
 );

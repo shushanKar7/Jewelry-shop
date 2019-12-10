@@ -163,6 +163,7 @@ nav li.effect-box:hover:before {
   box-shadow: 0 0 10px white;
 }
 
+
 @media screen and (max-width: 900px) {
   .headerNavbar i span {
     display: none;

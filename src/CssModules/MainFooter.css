@@ -3,20 +3,23 @@
 .mainFooterBlock {
   position: absolute;
   left: 50%;
-  top: 85%;
+  top: 80%;
   transform: translateX(-50%);
+  z-index: 9;
 }
 
 .under_slide_ul {
-  padding: 20px;
+  padding: 10px;
   display: flex;
   justify-content: center;
   margin: auto;
   text-transform: uppercase;
 }
+
 .fb,
 .inst,
 .twit {
+  margin: 10px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,9 +34,8 @@
   font-size: 18px;
   text-decoration: none;
   border: 1px solid white;
-  margin: 20px;
-
 }
+
 .twit:hover,
 .fb:hover,
 .inst:hover {
