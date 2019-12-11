@@ -30,15 +30,9 @@ class ProductMaker {
     }
 }
 for ( let i = 0; i < necklaces.length; i++ ) {
-    products[products.length] = new ProductMaker('Bloodstone',87,"Necklace", necklaces[i]);
-}
-for ( let i = 0; i < necklaces.length; i++ ) {
     products[products.length] = new ProductMaker('Obsidian',50,"Ring", rings[i]);
-}
-for ( let i = 0; i < necklaces.length; i++ ) {
     products[products.length] = new ProductMaker('Amber',79,"Earring", earrnings[i]);
+    products[products.length] = new ProductMaker('Bloodstone',87,"Necklace", necklaces[i]);
+    products[products.length] = new ProductMaker('Andalusite',50,"Bracelet", bracelets[i]);
 }
-    for ( let i = 0; i < necklaces.length; i++ ) {
-        products[products.length] = new ProductMaker('Andalusite',50,"Bracelet", bracelets[i]);
-    }
 export default products;
