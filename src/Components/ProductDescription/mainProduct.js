@@ -19,7 +19,7 @@ class mainProduct extends Component {
     console.log(this.props.products)
     return (
       <Fragment>
-        <HeaderNavbar backround={earringSectionBg} />
+        <HeaderNavbar background={earringSectionBg}  />
         <div className='mainProductWrapper'>
           <div className = 'ProductImgBlock'>
             <img src={PRODUCT['image']} />
