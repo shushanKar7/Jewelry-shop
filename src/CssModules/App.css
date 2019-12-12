@@ -1,5 +1,6 @@
 @import "HeaderNavbar.css";
 @import "Account.css";
+@import 'Product.css';
 @import "ItemBox.css";
 @import "MainFooter.css";
 @import "Footer.css";
@@ -21,6 +22,11 @@ body,
 }
                     /* //CSS FOR SLIDESHOW */
                     /* //CSS FOR SLIDESHOW */
+.react-slideshow-container .nav{
+    position: absolute;
+    top: 50%;
+} 
+                    
  .containerSlide {
     background: rgba(0, 0, 0, 0.966);
     width: 100vw;

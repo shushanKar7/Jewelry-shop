@@ -11,12 +11,12 @@ class ItemBox extends Component {
   render() {
       return (
         <div className="itemBox">
+         
           <div
             className="itemImage"
             style={{ backgroundImage: `url(${this.props.image})` }}
           >
 
-            <Link to={`products/${this.props.id}`}>
               <div className="overlayText .fadeIn-left">
 
               <h3>This is a title</h3>
@@ -27,8 +27,8 @@ class ItemBox extends Component {
                 of type and scrambled it to make a type specimen book.
               </p>
             </div>
-            </Link>
-            <div className="overlay"></div>
+           
+            <Link to={`products/${this.props.id}`}><div className="overlay"></div></Link>
           </div>
           <div className="itemDetail">
             <div className="itemBoxSpan">
@@ -37,14 +37,14 @@ class ItemBox extends Component {
               <span>{this.props.price}</span>
             </div>
             <div className="itemBoxButton">
-            <button
+            <button className = 'buttonAddToCart'
               onClick={() => {
                 this.handleClick(this.props.id);
               }}
             >
               ADD TO CART
             </button>
-              <button>BUY</button>
+              <button className = 'buttonAddToFavorite'>BUY</button>
               <i className="fa fa-heart"></i>
             </div>
           </div>
