@@ -1,4 +1,5 @@
 import React from "react";
+import { Animated } from "react-animated-css";
 import { Component } from "react";
 import { connect } from "react-redux";
 import { addToCart } from "../../store/actions/cartActions";
@@ -10,6 +11,8 @@ class ItemBox extends Component {
   };
   render() {
       return (
+        <Animated animationIn="fadeInDown" animationOut="fadeOutDown" animationInDuration="3000" isVisible={true}>
+
         <div className="itemBox">
          
           <div
@@ -49,6 +52,7 @@ class ItemBox extends Component {
             </div>
           </div>
         </div>
+        </Animated>
       );
   }
 }

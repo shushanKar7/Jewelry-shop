@@ -1,6 +1,5 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import Recipe from "../Components/Recipe";
 import {
   removeItem,
@@ -106,6 +105,7 @@ class Cart extends Component {
     );
     return (
       <Fragment>
+
         <div className="cart">
           <div className="closeCart" onClick={this.props.closePopup}>
             <i className="fa fa-times" onClick={this.props.closePopup}></i>

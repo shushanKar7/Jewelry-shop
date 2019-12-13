@@ -9,9 +9,9 @@ import Rings from "./Rings";
 import Necklaces from "../Components/Necklaces";
 import Bracelets from "./Bracelets";
 import Earrings from "./Earrings";
-import ChristmasSection from "./Merry Christmas/ChristmasSection";
 import Cart from "./Cart";
 import mainProduct from '../Components/ProductDescription/mainProduct';
+import SavedItems from './SavedItems/SavedItems'
 
 class App extends Component {
   render() {
@@ -19,9 +19,9 @@ class App extends Component {
       <Router>
         <div className="container">
           <Switch>
+          <Route path="/wishList" component={SavedItems}></Route> 
             <Route path="/products" component={mainProduct}></Route>
             <Route exact path="/cart" component={Cart}></Route>
-            <Route path="/christmas" component={ChristmasSection}></Route>
             <Route exact path="/" component={SlideShow}></Route>
             <Route path="/SignUp" component={SignUp}></Route>
             <Route path="/SignIn" component={SignIn}></Route>

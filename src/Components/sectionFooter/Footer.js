@@ -1,5 +1,7 @@
 import React from "react";
 import { Fragment } from "react";
+import { Animated } from "react-animated-css";
+
 
 const Footer = () => {
   return (
