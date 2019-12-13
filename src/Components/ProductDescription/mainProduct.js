@@ -32,6 +32,7 @@ class mainProduct extends Component {
               animationIn="fadeInLeft"
               animationOut="fadeOutLeft"
               isVisible={true}
+              animationInDuration = '2000'
             >
               <img src={PRODUCT["image"]} />
             </Animated>
@@ -41,6 +42,7 @@ class mainProduct extends Component {
               animationIn="fadeInRight"
               animationOut="fadeOutRight"
               isVisible={true}
+              animationInDuration = '2000'
             >
               <span>{PRODUCT["name"]}</span>
               <p>{PRODUCT["description"]}</p>

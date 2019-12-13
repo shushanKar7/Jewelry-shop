@@ -11,7 +11,7 @@ class ItemBox extends Component {
   };
   render() {
       return (
-        <Animated animationIn="fadeInDown" animationOut="fadeOutDown" animationInDuration="3000" isVisible={true}>
+        <Animated animationIn="fadeInDown" animationOut="fadeOutDown" animationInDuration="2000" isVisible={true}>
 
         <div className="itemBox">
          
