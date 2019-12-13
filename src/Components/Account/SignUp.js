@@ -22,15 +22,17 @@ class SignUp extends Component {
     errorCount: null,
     serverError: false,
     form: {
-      name: "",
-      surname: "",
+      firstName: "",
+      lastName: "",
+      username:'',
       email: "",
       password: "",
       confirmPassword: ""
     },
     user: {
-      name: "",
-      surname: "",
+      firstName: "",
+      lastName: "",
+      username:"",
       email: "",
       password: "",
       confirmPassword: ""
@@ -42,14 +44,17 @@ class SignUp extends Component {
     let errors = this.state.user;
     let inputValues = this.state.form;
     switch (name) {
-      case "name":
-        errors.name = value.length < 5 ? "Name must be 5 characters long!" : "";
-        inputValues.name = value;
+      case "firstName":
+        errors.firstName = value.length < 5 ? "Name must be 5 characters long!" : "";
+        inputValues.firstName = value;
         break;
-      case "surname":
-        errors.surname = value.length < 2 ? "Name must be 2 characters long!" : "";
-        inputValues.surname = value;
+      case "lastName":
+        errors.lastName = value.length < 2 ? "Name must be 2 characters long!" : "";
+        inputValues.lastName = value;
         break;
+      case 'username':
+      errors.username = value.length<5? "Surname must be 5 characters long!" : "";
+      inputValues.username = value;
       case "email":
         errors.email = validEmailRegex.test(value) ? "" : "Email is not valid!";
         inputValues.email = value;
@@ -63,7 +68,6 @@ class SignUp extends Component {
         errors.confirmPassword = inputValues.password.value !== inputValues.confirmPassword.value ? "Passwords don't match" : "";
         inputValues.confirmPassword = value;
     }
-    console.log(inputValues)
     //  {if(this.state.password.value !== this.state.confirmPassword.value){
     //    this.state.user = "Passwords didn't match"
     //  }else{
@@ -73,39 +77,40 @@ class SignUp extends Component {
     //  }}
     this.setState({ errors, [name]: value });
   };
-  generateInput = (input = "") => {
-    if (input.length < 5 || input.length >= 20) {
-      return "Are you tired";
-    }
-    let result = [];
-    const A = 65;
-    for (let i = 0; i < this.state.userInfo.userName.length; i++) {
-      result[result.length] = this.state.userInfo.userName[i].charCodeAt() - A;
-    }
-    return result.join('');
-  }
+  // generateInput = (input = "") => {
+  //   // if (input.length < 5 || input.length >= 20) {
+  //   //   return "Are you tired";
+  //   // }
+  //   let result = [];
+  //   const A = 65;
+  //   // for (let i = 0; i < this.state.userInfo.userName.length; i++) {
+  //   //   result[result.length] = this.state.userInfo.userName[i].charCodeAt() - A;
+  //   // }
+  //   return result.join('');
+  // }
   handleSubmit = event => {
     event.preventDefault();
     this.setState({ formValid: validateForm(this.state.user) });
     this.setState({ errorCount: countErrors(this.state.user) });
     setTimeout(() => {
       if (this.state.formValid === true) {
-        fetch("http://192.168.5.69:8001/api/Users/Register", {
+        fetch("http://rest.learncode.academy/api/johnbob/friends", {
           method: 'POST',
           headers: {
             "Content-type": "application/json; charset=UTF-8"
           },
           body: JSON.stringify({
-            username: this.generateInput(this.state.user.email),
-            email: this.generateInput(this.state.user.email),
-            firstName: this.generateInput(this.state.user.name),
-            lastName: this.generateInput(this.state.user.surname),
-            password: this.generateInput(this.state.user.password),
-            confirmPassword: this.generateInput(this.state.user.confirmPassword)
+            firstName: this.state.form.firstName,
+            lastName: this.state.form.lastName,
+            email: this.state.form.email,
+            username: this.state.form.username,
+            password: this.state.form.password,
+            confirmPassword: this.state.form.confirmPassword
           })
         }).then(response => console.log(JSON.parse(response) + "xi ches ashxatum"))
           .catch(this.showError)
           .catch ( console.log );
+          
       }
     }, 0);
   };
@@ -131,29 +136,44 @@ class SignUp extends Component {
               <form onSubmit={this.handleSubmit}>
                 <div>
                   <input
+                    autoComplete="off"
                     type="text"
                     required
-                    name="name"
+                    name="firstName"
                     id="name"
                     placeholder="Enter Your Name"
                     onChange={this.handleChange}
                   />
-                  {user.name.length > 0 && (
-                    <span className="error">{user.name}</span>
+                  {user.firstName.length > 0 && (
+                    <span className="error">{user.firstName}</span>
+                  )}
+                </div>
+                <div>
+                  <input
+                    autoComplete="off"
+                    type="text"
+                    required
+                    name="lastName"
+                    id="surname"
+                    // value=''
+                    placeholder="Enter Your Surname"
+                    onChange={this.handleChange}
+                  />
+                  {user.lastName.length > 0 && (
+                    <span className="error">{user.lastName}</span>
                   )}
                 </div>
                 <div>
                   <input
                     type="text"
                     required
-                    name="surname"
-                    id="surname"
-                    value=''
-                    placeholder="Enter Your Surname"
+                    name="username"
+                    autoComplete="off"
+                    placeholder="Enter Your Username"
                     onChange={this.handleChange}
                   />
-                  {user.surname.length > 0 && (
-                    <span className="error">{user.surname}</span>
+                  {user.username.length > 0 && (
+                    <span className="error">{user.username}</span>
                   )}
                 </div>
                 <div>
@@ -161,6 +181,7 @@ class SignUp extends Component {
                     type="email"
                     required
                     name="email"
+                    autoComplete="off"
                     id="email"
                     placeholder="Enter Your Email"
                     onChange={this.handleChange}
@@ -174,6 +195,7 @@ class SignUp extends Component {
                     type="password"
                     required
                     name="password"
+                    autoComplete="off"
                     id="password"
                     placeholder="Enter Password"
                     onChange={this.handleChange}
@@ -186,6 +208,7 @@ class SignUp extends Component {
                   <input
                     type="password"
                     required
+                    autoComplete="off"
                     name="confirmPassword"
                     id="confirmPassword"
                     placeholder="Confirm your Password"
