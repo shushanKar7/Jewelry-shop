@@ -1,9 +1,14 @@
 import React from "react";
+import { Animated } from "react-animated-css";
 const MainFooter = () => {
   return (
     <div className="mainFooterBlock">
-
-
+      <Animated
+        animationIn="fadeInDown"
+        animationOut="fadeOutDown"
+        animationInDuration="2000"
+        isVisible={true}
+      >
         <ul className="under_slide_ul">
           <a
             className="twit"
@@ -27,7 +32,7 @@ const MainFooter = () => {
             <span className="fa fa-instagram"></span>
           </a>
         </ul>
-
+      </Animated>
     </div>
   );
 };

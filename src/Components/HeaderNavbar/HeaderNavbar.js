@@ -35,7 +35,7 @@ class HeaderNavbar extends Component {
           <Animated
             animationIn="fadeInDown"
             animationOut="fadeOutDown"
-            animationInDuration="3000"
+            animationInDuration="2000"
             isVisible={true}
           >
             <i className="fa fa-user">
@@ -64,7 +64,7 @@ class HeaderNavbar extends Component {
           <Animated
             animationIn="fadeInDown"
             animationOut="fadeOutDown"
-            animationInDuration="3000"
+            animationInDuration="2000"
             isVisible={true}
           >
             <div className="logo"></div>
@@ -73,7 +73,7 @@ class HeaderNavbar extends Component {
         <Animated
           animationIn="fadeInDown"
           animationOut="fadeOutDown"
-          animationInDuration="3000"
+          animationInDuration="2000"
           isVisible={true}
         >
           <div className="navBar">
