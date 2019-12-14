@@ -4,11 +4,16 @@ import { Component } from "react";
 import { connect } from "react-redux";
 import { addToCart } from "../../store/actions/cartActions";
 import {Link} from 'react-router-dom'
+import SAVED_ITEMS_ARRAY from '../SavedItems/SavedItemsArray'
 
 class ItemBox extends Component {
   handleClick = id => {
     this.props.addToCart(id);
+    this.setState ( { isAdded: true } );
   };
+  state = {
+    isAdded: false
+  }
   render() {
       return (
         <Animated animationIn="fadeInDown" animationOut="fadeOutDown" animationInDuration="2000" isVisible={true}>
@@ -21,13 +26,8 @@ class ItemBox extends Component {
           >
 
               <div className="overlayText .fadeIn-left">
-
-              <h3>This is a title</h3>
               <p style={{ padding: "20px" }}>
-                Lorem Ipsum is simply dummy text of the printing and typesetting
-                industry. Lorem Ipsum has been the industry's standard dummy
-                text ever since the 1500s, when an unknown printer took a galley
-                of type and scrambled it to make a type specimen book.
+               {this.props.description}
               </p>
             </div>
            
@@ -37,7 +37,7 @@ class ItemBox extends Component {
             <div className="itemBoxSpan">
               <span>{this.props.name}</span>
               <br />
-              <span>{this.props.price}</span>
+              <span>{this.props.price}$</span>
             </div>
             <div className="itemBoxButton">
             <button className = 'buttonAddToCart'
@@ -45,10 +45,12 @@ class ItemBox extends Component {
                 this.handleClick(this.props.id);
               }}
             >
-              ADD TO CART
-            </button>
+              { 
+              this.state.isAdded ? "ADDED" : "ADD TO CART"
+              }
+              </button>
               <button className = 'buttonAddToFavorite'>BUY</button>
-              <i className="fa fa-heart"></i>
+              <i className="fa fa-heart" onClick={() => SAVED_ITEMS_ARRAY.push(this.props)}></i>
             </div>
           </div>
         </div>

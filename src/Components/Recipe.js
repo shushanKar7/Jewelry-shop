@@ -16,15 +16,16 @@ class Recipe extends Component {
         <div className="collection">
           <li className="collection-item">
             <label>
-              <div>
-                <input onChange={this.handleChecked} ref="shipping" type="checkbox" id="check" name="check" />
-                <label onChange={this.handleChecked} for="check"></label>
-              </div>
-              <p className = 'emptyText'>Shipping and taxes calculated at checkout(+6$)</p>
+              <input
+                type="checkbox"
+                ref="shipping"
+                onChange={this.handleChecked}
+              />
+              <span>Shipping and taxes calculated at checkout(+6$)</span>
             </label>
           </li>
           <li className="collection-item">
-            <p className="emptyText">Total: {this.props.total} $</p>
+            <div>Total: {this.props.total}$</div>
           </li>
         </div>
         <div className="checkout">

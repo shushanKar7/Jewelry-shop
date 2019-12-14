@@ -50,7 +50,7 @@ h1 {
 .overlayText p {
   color: white;
   padding: 20px;
-  font-family: "Dancing Script", cursive;
+  font-family: "Century Gothic", sans-serif;
   z-index: 9999;
   position: relative;
 }
@@ -61,7 +61,7 @@ h1 {
 .itemBoxSpan span {
   color: #444;
   font-family: "Dancing Script", cursive;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 .itemBoxSpan span:last-child {
   margin-left: 20px;

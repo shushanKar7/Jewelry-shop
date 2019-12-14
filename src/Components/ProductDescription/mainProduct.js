@@ -46,6 +46,7 @@ class mainProduct extends Component {
             >
               <span>{PRODUCT["name"]}</span>
               <p>{PRODUCT["description"]}</p>
+              <p>{PRODUCT["zodiac"]}</p>
               <div className="itemBoxButton">
                 <button
                   className="buttonAddToCart"

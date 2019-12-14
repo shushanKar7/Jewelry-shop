@@ -43,7 +43,7 @@ class HeaderNavbar extends Component {
                 <span>Sign in</span>
               </Link>
             </i>
-            <Link to={`wishList/${this.props.id}`}>
+            <Link to="/saveditems">
               <i className="fa fa-heart">
                 <span>Saved Items</span>
               </i>
@@ -51,14 +51,10 @@ class HeaderNavbar extends Component {
 
             <i
               className="fa fa-shopping-cart"
-              onClick={this.togglePopup.bind(this)}
             >
-              <span>Cart</span>
+          <Link to='/cart'>  <span>Cart</span></Link>  
             </i>
           </Animated>
-          {this.state.showPopup ? (
-            <Cart closePopup={this.togglePopup.bind(this)} />
-          ) : null}
         </div>
         <Link to="/">
           <Animated

@@ -1,5 +1,6 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Link } from "react-router-dom";
 import Recipe from "../Components/Recipe";
 import {
   removeItem,
@@ -20,15 +21,6 @@ class Cart extends Component {
   handleSubtractQuantity = id => {
     this.props.subtractQuantity(id);
   };
-  state = {
-    showPopup: false
-  };
-
-  togglePopup() {
-    this.setState({
-      showPopup: !this.state.showPopup
-    });
-  }
   render() {
     let addedItems = this.props.products.length ? (
       this.props.products.map(product => {
@@ -40,53 +32,29 @@ class Cart extends Component {
             <div className="itemDesc">
               <span className="title">{product.title}</span>
               <p>{product.desc}</p>
-              <div className="productInfo">
-                <p>Price: {product.price}$</p>
-              </div>
-              <div className="productInfo">
-                <p>Quantity: {product.quantity}</p>
-              </div>
-              {this.state.showPopup ? (
-                <Fragment>
-                  <div className="itemDesc">
-                    <span className="title">{product.title}</span>
-                    <p>{product.desc}</p>
-                    <p>
-                      <div>Price: {product.price}$</div>
-                    </p>
-                    <p>
-                      <b>Quantity: {product.quantity}</b>
-                    </p>
-                  </div>
-                  <div className="add-remove">
-                    <i
-                      className="fa fa-angle-up"
-                      onClick={() => {
-                        this.handleAddQuantity(product.id);
-                      }}
-                    ></i>
-                    <i
-                      className="fa fa-angle-down"
-                      onClick={() => {
-                        this.handleSubtractQuantity(product.id);
-                      }}
-                    ></i>
-                  </div>
-                </Fragment>
-              ) : null}
+              <p>
+                <div>Price: {product.price}$</div>
+              </p>
+              <p>
+                <b>Quantity: {product.quantity}</b>
+              </p>
               <div className="add-remove">
-                <i
-                  className="fa fa-angle-up"
-                  onClick={() => {
-                    this.handleAddQuantity(product.id);
-                  }}
-                ></i>
-                <i
-                  className="fa fa-angle-down"
-                  onClick={() => {
-                    this.handleSubtractQuantity(product.id);
-                  }}
-                ></i>
+                <Link to="/cart">
+                  <i
+                    className="fa fa-angle-up"
+                    onClick={() => {
+                      this.handleAddQuantity(product.id);
+                    }}
+                  ></i>
+                </Link>
+                <Link to="/cart">
+                  <i
+                    className="fa fa-angle-down"
+                    onClick={() => {
+                      this.handleSubtractQuantity(product.id);
+                    }}
+                  ></i>
+                </Link>
               </div>
               <button
                 className="removeButton"
@@ -101,20 +69,16 @@ class Cart extends Component {
         );
       })
     ) : (
-      <p className="emptyText">You don't have any items in your cart yet.</p>
+      <p>You don't have any items in your cart yet.</p>
     );
     return (
-      <Fragment>
-
+      <div className="container">
         <div className="cart">
-          <div className="closeCart" onClick={this.props.closePopup}>
-            <i className="fa fa-times" onClick={this.props.closePopup}></i>
-          </div>
           <h1>YOUR CART</h1>
           <ul className="collection">{addedItems}</ul>
-          <Recipe />
         </div>
-      </Fragment>
+        <Recipe />
+      </div>
     );
   }
 }

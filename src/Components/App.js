@@ -19,9 +19,9 @@ class App extends Component {
       <Router>
         <div className="container">
           <Switch>
-          <Route path="/wishList" component={SavedItems}></Route> 
+          <Route exact path="/cart" component={Cart}></Route>
+          <Route exact path="/savedItems" component={SavedItems}></Route>
             <Route path="/products" component={mainProduct}></Route>
-            <Route exact path="/cart" component={Cart}></Route>
             <Route exact path="/" component={SlideShow}></Route>
             <Route path="/SignUp" component={SignUp}></Route>
             <Route path="/SignIn" component={SignIn}></Route>

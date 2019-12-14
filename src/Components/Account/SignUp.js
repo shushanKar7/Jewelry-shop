@@ -2,6 +2,8 @@ import React from "react";
 import { Fragment } from "react";
 import { Link } from 'react-router-dom';
 import { Component } from "react";
+import { Animated } from 'react-animated-css'
+
 const validEmailRegex = RegExp(
   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
 );
@@ -94,7 +96,7 @@ class SignUp extends Component {
     this.setState({ errorCount: countErrors(this.state.user) });
     setTimeout(() => {
       if (this.state.formValid === true) {
-        fetch("http://rest.learncode.academy/api/johnbob/friends", {
+        fetch("http://192.168.5.69:8001/api/Users/Register", {
           method: 'POST',
           headers: {
             "Content-type": "application/json; charset=UTF-8"
@@ -128,7 +130,10 @@ class SignUp extends Component {
             </div>
           </div>
           <div className="box2">
+
             <div className="content">
+            <Animated animationIn="fadeInDown" animationOut="fadeOutDown" animationInDuration="2000" isVisible={true}>
+              <div>
               <h2 className="title">Sign Up</h2>
               {
                 this.state.serverError ? <h2>SERVER ERROR</h2> : null
@@ -219,9 +224,13 @@ class SignUp extends Component {
                   <button onClick = {this.handleSubmit} className="submit">Sign Up</button>
                 </div>
               </form>
+              </div>
+              </Animated>
               <p>Already have an account? <Link to='/SignIn'><a className="changer" >Sign in</a></Link> </p>
             </div>
+
           </div>
+        
         </div>
       </Fragment>
     );
