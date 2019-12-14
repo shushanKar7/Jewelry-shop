@@ -8,20 +8,24 @@ class SavedItems extends Component {
       <Fragment>
           {
               SAVED_ITEMS_ARRAY.map(val => {
-                 return (<div className="mainProductWrapper">
-                      <div className="ProductImgBlock">
+              return (
+                  <div className="savedItemsWrapper">
+                      <div className="savedItemsImgBlock">
                           <img src={val["image"]} />
+                      <div className = 'savedItemsButtonBlock'>
+                        <button className="buttonAddToCart">ADD TO CART</button>
+                        <button className="buttonAddToFavorite">BUY</button>
                       </div>
-                      <div className="productDescription">
+                      </div>
+                      {/* <div className="productDescription">
                           <span>{val["name"]}</span>
                           <p>{val["description"]}</p>
                           <div className="itemBoxButton">
-                              <button className="buttonAddToCart">ADD TO CART</button>
-                              <button className="buttonAddToFavorite">BUY</button>
                               <i className="fa fa-heart"></i>
                           </div>
-                      </div>
-                  </div>)
+                      </div> */}
+                  </div>
+                  )
               })
           }
           </Fragment>

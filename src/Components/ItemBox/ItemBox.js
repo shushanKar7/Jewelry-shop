@@ -9,10 +9,10 @@ import SAVED_ITEMS_ARRAY from '../SavedItems/SavedItemsArray'
 class ItemBox extends Component {
   handleClick = id => {
     this.props.addToCart(id);
-    this.setState ( { isAdded: true } );
+    this.setState ( { isAdded: true,disabled:true } );
   };
   state = {
-    isAdded: false
+    isAdded: false,
   }
   render() {
       return (
@@ -40,7 +40,10 @@ class ItemBox extends Component {
               <span>{this.props.price}$</span>
             </div>
             <div className="itemBoxButton">
-            <button className = 'buttonAddToCart'
+            <button
+            disabled={this.state.isAdded} 
+            style = {{background: this.state.isAdded ? '#274354': "" }}
+            className = 'buttonAddToCart'
               onClick={() => {
                 this.handleClick(this.props.id);
               }}

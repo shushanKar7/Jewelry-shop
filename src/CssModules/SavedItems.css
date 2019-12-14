@@ -1,0 +1,27 @@
+.savedItemsWrapper{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 90%;
+    border-radius: 10px;
+    padding: 60px 0
+}
+.savedItemsButtonBlock{
+    display: flex;
+    justify-content: space-around;
+    margin:30px;
+}
+.savedItemsImgBlock{
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.savedItemsImgBlock img{
+    border-radius: 5px;
+    width: 400px;
+    height: 300px;
+}
+/* .mainProductWrapper .ProductImgBlock{
+    width: 400px;
+    height: 300px;
+} */
