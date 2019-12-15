@@ -38,8 +38,8 @@ class ProductMaker {
 }
 for ( let i = 0; i < necklaces.length; i++ ) {
     products[products.length] = new ProductMaker(Ring.names[i],Ring.prices[i],"Ring", rings[i],Ring.descriptions[i],Ring.zodiac[i]);
-    products[products.length] = new ProductMaker(Earring.names[i],Earring.prices[i],"Earring", earrnings[i],Earring.descriptions[i]);
-    products[products.length] = new ProductMaker(Necklace.names[i],Necklace.prices[i],"Necklace", necklaces[i],Necklace.descriptions[i]);
-    products[products.length] = new ProductMaker(Bracelet.names[i],Bracelet.prices[i],"Bracelet", bracelets[i],Bracelet.descriptions[i]);
+    products[products.length] = new ProductMaker(Earring.names[i],Earring.prices[i],"Earring", earrnings[i],Earring.descriptions[i],Earring.zodiac[i]);
+    products[products.length] = new ProductMaker(Necklace.names[i],Necklace.prices[i],"Necklace", necklaces[i],Necklace.descriptions[i],Necklace.zodiac[i]);
+    products[products.length] = new ProductMaker(Bracelet.names[i],Bracelet.prices[i],"Bracelet", bracelets[i],Bracelet.descriptions[i],Bracelet.zodiac[i]);
 }
 export default products;

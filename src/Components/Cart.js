@@ -1,7 +1,8 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import { Link } from "react-router-dom";
 import Recipe from "../Components/Recipe";
+import { Link } from "react-router-dom";
+
 import {
   removeItem,
   addQuantity,
@@ -32,29 +33,27 @@ class Cart extends Component {
             <div className="itemDesc">
               <span className="title">{product.title}</span>
               <p>{product.desc}</p>
-              <p>
-                <div>Price: {product.price}$</div>
-              </p>
-              <p>
-                <b>Quantity: {product.quantity}</b>
-              </p>
+              <div className="productInfo">
+                <p>Price: {product.price}$</p>
+              </div>
+              <div className="productInfo">
+                <p>Quantity: {product.quantity}</p>
+              </div>
               <div className="add-remove">
-                <Link to="/cart">
-                  <i
-                    className="fa fa-angle-up"
-                    onClick={() => {
-                      this.handleAddQuantity(product.id);
-                    }}
-                  ></i>
-                </Link>
-                <Link to="/cart">
-                  <i
-                    className="fa fa-angle-down"
-                    onClick={() => {
-                      this.handleSubtractQuantity(product.id);
-                    }}
-                  ></i>
-                </Link>
+                <Link to='/cart'>
+                <i
+                  className="fa fa-angle-up"
+                  onClick={() => {
+                    this.handleAddQuantity(product.id);
+                  }}
+                ></i></Link>
+                <Link to='/cart'>
+                <i
+                  className="fa fa-angle-down"
+                  onClick={() => {
+                    this.handleSubtractQuantity(product.id);
+                  }}
+                ></i></Link>
               </div>
               <button
                 className="removeButton"
@@ -69,16 +68,16 @@ class Cart extends Component {
         );
       })
     ) : (
-      <p>You don't have any items in your cart yet.</p>
+      <p className="emptyText">You don't have any items in your cart yet.</p>
     );
     return (
-      <div className="container">
+      <Fragment>
         <div className="cart">
           <h1>YOUR CART</h1>
           <ul className="collection">{addedItems}</ul>
+          <Recipe />
         </div>
-        <Recipe />
-      </div>
+      </Fragment>
     );
   }
 }

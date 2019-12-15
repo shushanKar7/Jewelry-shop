@@ -2,7 +2,8 @@ import React from "react";
 import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Component } from "react";
-import { Aniamted } from "react-animated-css";
+import { Animated } from 'react-animated-css'
+
 
 const validEmailRegex = RegExp(
   /^(([^<>()\[\]\.,;:\s@\"]+(\.[^<>()\[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i
@@ -70,6 +71,8 @@ class SignIn extends Component {
           </div>
           <div className="box2">
             <div className="contentSignIn">
+            <Animated animationIn="fadeInDown" animationOut="fadeOutDown" animationInDuration="2000" isVisible={true}>
+              <Fragment>
               <h2 className="title">Sign In</h2>
               <form onSubmit={this.handleSubmit} noValidate>
                 <div>
@@ -112,6 +115,8 @@ class SignIn extends Component {
                   <a>Sign up</a>
                 </Link>{" "}
               </p>
+            </Fragment>
+            </Animated>
             </div>
           </div>
         </div>

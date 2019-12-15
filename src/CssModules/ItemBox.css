@@ -104,9 +104,10 @@ h1 {
     text-shadow: 0 0 3px rgb(1, 24, 51);
     cursor: pointer;
     color: #ffffff;
+    transition: 0.3s;
 }
 .itemDetail .itemBoxButton i:hover {
-  color: rgba(79, 105, 134, 0.938);
+  color: #4f6986ef;
 }
 .buttonAddToCart:hover {
   background: #274354;

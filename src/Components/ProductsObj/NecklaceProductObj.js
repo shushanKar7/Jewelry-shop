@@ -41,6 +41,27 @@ const Necklace = {
         'Labradorite protects one against negative energies. It allows effective communication, and dispel depression and anxiety strengthening our own positive energy. Labradorite encourages one to embrace new ideas and opportunities.',
         'Aquamarine is a stone that helps clear communication, without anger and judgment. Encourages to be true to the self, trust the universe and let go. Aquamarine reduces fears and mental tension. ',
         'Rose Quartz opens the heart to all types of love. It helps to rise your self-esteem, restore confidence and balance emotions. It is also one of the best crystals to use for positive self-affirmation.'
-    ]}
+    ],
+    zodiac: [
+        "Cancer's Zodiac Stone",
+        "Scorpio's Zodiac Stone",
+        "Aries' Zodiac Stone ",
+        "Sagittarius' Zodiac Stone",
+        "Taurus' Zodiac Stone",
+        "Aries' Zodiac Stone ",
+        "Cancer's Zodiac Stone",
+        "Sagittarius' Zodiac Stone",
+        "Pisces and Scorpio's Zodiac Stone",
+        "Scorpio's Zodiac Stone",
+        "Pisces and Scorpio's Zodiac Stone",
+        "Aquarius' Zodiac Stone",
+        "Gemini' Zodiac Stone",
+        "Capricon' Zodiac Stone",        
+        "Leo' Zodiac Stone",
+        "Gemini' Zodiac Stone",
+        "Virgo' Zodiac Stone",
+        "Libra' Zodiac Stone",
+    ]
+}
 
 export default Necklace

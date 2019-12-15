@@ -44,7 +44,24 @@ const Ring = {
         'Rose Quartz opens the heart to all types of love. It helps to rise your self-esteem, restore confidence and balance emotions. It is also one of the best crystals to use for positive self-affirmation.'
     ],
     zodiac: [
-        "sdfsgete"
+        "Cancer's Zodiac Stone",
+        "Scorpio's Zodiac Stone",
+        "Aries' Zodiac Stone ",
+        "Sagittarius' Zodiac Stone",
+        "Taurus' Zodiac Stone",
+        "Aries' Zodiac Stone ",
+        "Cancer's Zodiac Stone",
+        "Sagittarius' Zodiac Stone",
+        "Pisces and Scorpio's Zodiac Stone",
+        "Scorpio's Zodiac Stone",
+        "Pisces and Scorpio's Zodiac Stone",
+        "Aquarius' Zodiac Stone",
+        "Gemini' Zodiac Stone",
+        "Capricon' Zodiac Stone",        
+        "Leo' Zodiac Stone",
+        "Gemini' Zodiac Stone",
+        "Virgo' Zodiac Stone",
+        "Libra' Zodiac Stone",
     ]
 }
 

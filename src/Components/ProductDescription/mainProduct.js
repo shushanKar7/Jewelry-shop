@@ -45,8 +45,12 @@ class mainProduct extends Component {
               animationInDuration = '2000'
             >
               <span>{PRODUCT["name"]}</span>
-              <p>{PRODUCT["description"]}</p>
               <p>{PRODUCT["zodiac"]}</p>
+              <p>{PRODUCT["description"]}</p>
+              <p>
+              All our jewellery are made of sterling 925 Silver, 
+              handmade and hand-picked one by one. So it will be like having a unique piece on you.
+              </p>
               <div className="itemBoxButton">
                 <button
                   className="buttonAddToCart"

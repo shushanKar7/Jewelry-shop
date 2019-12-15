@@ -6,16 +6,6 @@ import { Animated } from "react-animated-css";
 import Cart from "../Cart";
 
 class HeaderNavbar extends Component {
-  state = {
-    showPopup: false
-  };
-
-  togglePopup() {
-    this.setState({
-      showPopup: !this.state.showPopup
-    });
-  }
-
   render() {
     const styleNav = {
       textShadow: "0 0 12px white",
@@ -48,12 +38,12 @@ class HeaderNavbar extends Component {
                 <span>Saved Items</span>
               </i>
             </Link>
-
+            <Link to='/cart'>
             <i
               className="fa fa-shopping-cart"
             >
-          <Link to='/cart'>  <span>Cart</span></Link>  
-            </i>
+              <span>Cart</span>
+            </i></Link>
           </Animated>
         </div>
         <Link to="/">
