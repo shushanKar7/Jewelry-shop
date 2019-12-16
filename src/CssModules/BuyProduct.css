@@ -1,0 +1,8 @@
+.paymentMethodImg{
+    width: 335px;
+    height: 50px;
+    background-image: url(../Images/paymentmethod.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position:center;
+}

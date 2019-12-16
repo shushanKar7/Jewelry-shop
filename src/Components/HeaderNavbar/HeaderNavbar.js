@@ -34,7 +34,7 @@ class HeaderNavbar extends Component {
               </Link>
             </i>
             <Link to="/saveditems">
-              <i className="fa fa-heart">
+              <i className="fa fa-heart fa-heartt">
                 <span>Saved Items</span>
               </i>
             </Link>

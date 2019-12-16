@@ -12,6 +12,7 @@ import Earrings from "./Earrings";
 import Cart from "./Cart";
 import mainProduct from '../Components/ProductDescription/mainProduct';
 import SavedItems from './SavedItems/SavedItems'
+import BuyProduct from "./buyProduct/BuyProduct";
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
         <div className="container">
           <Switch>
           <Route exact path="/cart" component={Cart}></Route>
+          <Route exact path="/BuyProduct" component={BuyProduct}></Route>
           <Route exact path="/savedItems" component={SavedItems}></Route>
             <Route path="/products" component={mainProduct}></Route>
             <Route exact path="/" component={SlideShow}></Route>

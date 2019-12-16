@@ -12,12 +12,12 @@
     font-size: 2em;
     margin: auto;
     display: table;
-    margin: 15px auto;
+    margin: 30px auto;
 }
 .mainProductWrapper p {
     line-height: 20px;
     padding-bottom: 20px;
-    font-size: 18px;
+    font-size: 22px;
 }
 .mainProductWrapper img {
     width: 600px;

@@ -15,13 +15,12 @@ class Recipe extends Component {
       <div className="container">
         <div className="collection">
           <li className="collection-item">
-            <label>
-              <input
-                type="checkbox"
-                ref="shipping"
-                onChange={this.handleChecked}
-              />
-              <span>Shipping and taxes calculated at checkout(+6$)</span>
+          <label>
+              <div>
+                <input onChange={this.handleChecked} ref="shipping" type="checkbox" id="check" name="check" />
+                <label onChange={this.handleChecked} for="check"></label>
+              </div>
+              <p className = 'emptyText'>Shipping and taxes calculated at checkout(+6$)</p>
             </label>
           </li>
           <li className="collection-item">

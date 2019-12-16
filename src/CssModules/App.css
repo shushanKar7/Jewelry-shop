@@ -8,6 +8,7 @@
 @import 'Cart.css';
 @import 'Christmas.css';
 @import 'SavedItems.css';
+@import 'BuyProduct.css';
 
 * {
     margin: 0;
