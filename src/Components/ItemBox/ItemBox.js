@@ -58,7 +58,7 @@ class ItemBox extends Component {
               >
                 {this.state.isAdded ? "ADDED" : "ADD TO CART"}
               </button>
-              <button className="buttonAddToFavorite">BUY</button>
+              <button className="buttonAddToFavorite">QUICK SHOP</button>
               <i
                 style={{ color: this.state.isFavorit ? "#4f6986ef" : "" }}
                 className="fa fa-heart"

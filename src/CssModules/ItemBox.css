@@ -72,7 +72,7 @@ h1 {
 .itemBoxButton button:first-child {
   margin-right: 20px;
 }
-.buttonAddToCart {
+.buttonAddToCart, .buttonAddToFavorite {
   background: #4b6473;
   color: #eae6e6;
   transition: 0.3s;
@@ -85,28 +85,17 @@ h1 {
   padding: 11px 12px;
   margin-right: 20px;
   width: 132px;
+  border-radius: 4px;
 }
-.buttonAddToFavorite{
-  width: 132px;
-  background: #4b6473;
-  color: #eae6e6;
-  transition: 0.3s;
-  outline: none;
-  cursor: pointer;
-  font-weight: 600;
-  font-size: 13px;
-  font-family: "Century Gothic",sans-serif;
-  font-weight: 700;
-  padding: 11px 12px;
-}
-.itemDetail .itemBoxButton i {
-  font-size: 1.4em;
+.fa-heart {
+    font-size: 1.4em;
     text-shadow: 0 0 3px rgb(1, 24, 51);
     cursor: pointer;
     color: #ffffff;
     transition: 0.3s;
 }
-.itemDetail .itemBoxButton i:hover {
+.fa-heart:hover {
+  text-shadow: 0 0 3px rgb(1, 24, 51);
   color: #4f6986ef;
 }
 .buttonAddToCart:hover {
@@ -116,9 +105,6 @@ h1 {
 .buttonAddToFavorite:hover{
   background: #274354;
   color: rgb(240, 238, 238);  
-}
-.disabled{
-  background: red;
 }
 .itemBoxSpan {
   color: #444;
@@ -161,11 +147,9 @@ h1 {
   width: 132px;
   padding: 11px 12px;
 }
-.itemDetail i {
-  color: rgb(182, 47, 47);
-}
-.itemDetail a i {
+
+/* .itemDetail a i {
   font-size: 26px;
   color: rgb(207, 57, 57);
   cursor: pointer;
-}
+} */

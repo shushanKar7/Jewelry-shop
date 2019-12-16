@@ -60,7 +60,6 @@ class mainProduct extends Component {
                 >
                   ADD TO CART
                 </button>
-                <button className="buttonAddToFavorite">BUY</button>
                 <i className="fa fa-heart"></i>
               </div>
             </Animated>

@@ -118,10 +118,16 @@ i span {
   cursor: pointer;
   color: white;
 }
+.accountCartBlcok i {
+  padding: 5px 10px;
+  font-size: 16px;
+  color: white;
+}
 .fa-user:hover,
 .fa-shopping-cart:hover,
 .fa-heart:hover {
-  text-shadow: 0 0 10px white;
+  text-shadow: 0 0 10px white !important; 
+  color: white !important;
   transition: 0.2s;
 }
 

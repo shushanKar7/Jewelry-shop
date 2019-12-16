@@ -29,7 +29,7 @@ class Recipe extends Component {
           </li>
         </div>
         <div className="checkout">
-          <button className="checkoutButton">Checkout</button>
+          <button style = {{width:'200px'}} className="buttonAddToCart">PROCEED TO CHECKOUT</button>
         </div>
       </div>
     );
@@ -41,7 +41,6 @@ const mapStateToProps = state => {
     total: state.total
   };
 };
-
 const mapDispatchToProps = dispatch => {
   return {
     addShipping: () => {
