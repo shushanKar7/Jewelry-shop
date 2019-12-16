@@ -35,6 +35,15 @@
   background-image: url(../Images/logo.png);
   background-size: cover;
 }
+.logoLink{
+  display: inline-block;
+  animation-delay: 0ms;
+  animation-duration: 2000ms;
+  pointer-events: all;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 .navBar {
   width: 100%;
   margin-top: 30px;

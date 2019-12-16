@@ -39,14 +39,15 @@ class HeaderNavbar extends Component {
               </i>
             </Link>
             <Link to='/cart'>
-            <i
-              className="fa fa-shopping-cart"
-            >
-              <span>Cart</span>
-            </i></Link>
+              <i
+                className="fa fa-shopping-cart"
+              >
+                <span>Cart</span>
+              </i></Link>
           </Animated>
         </div>
-        <Link to="/">
+        <Link className = 'logoLink' 
+        to="/">
           <Animated
             animationIn="fadeInDown"
             animationOut="fadeOutDown"
