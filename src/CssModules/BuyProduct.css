@@ -6,3 +6,42 @@
     background-repeat: no-repeat;
     background-position:center;
 }
+.BuyProductWrapper{width: 80%;margin: auto;}
+.BuyProductWrapper h1,h2,h3{
+    color:#4d1b26;
+    font-family: "Century Gothic", sans-serif;
+}
+.BuyProductWrapper h2{
+    margin: 5px 0 25px;
+}
+.circle{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BuyProductWrapper form div{
+    margin-bottom: 10px;
+}
+.formDiv{
+    width: 50%;
+}
+.formDiv input{
+    border-radius: 3px;
+    color: #444;
+    border: 1px solid #4b6473;
+    outline: rebeccapurple;
+}
+.BuyProductWrapper label{font-size: 14px;color: black;}
+form{
+    font-family: "Century Gothic", sans-serif;
+}
+form select{
+    width: 100px;
+    margin: 5px 0 20px;
+    outline: none;
+    border: 1px solid #4b6473;
+}
