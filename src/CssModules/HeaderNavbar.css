@@ -95,7 +95,7 @@ span {font-family: "Open Sans", sans-serif;}
 
 .fa-user,
 .fa-shopping-cart,
-.fa-heart {
+.fa-heartt {
   padding: 5px 10px;
   font-size: 16px;
   color: white;
@@ -125,10 +125,10 @@ i span {
 }
 .fa-user:hover,
 .fa-shopping-cart:hover,
-.fa-heart:hover {
+.fa-heartt:hover {
   text-shadow: 0 0 10px white !important; 
-  color: white !important;
   transition: 0.2s;
+  color: white !important;
 }
 
 /* NAV LI EFFECTS */
