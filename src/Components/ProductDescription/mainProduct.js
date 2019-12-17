@@ -9,8 +9,10 @@ import { addToCart } from "../../store/actions/cartActions";
 
 class mainProduct extends Component {
   handleClick = id => {
-    console.log(this.props.addToCart(id));
+    this.props.addToCart(id);
+    console.log(this.props.addToCart)
   };
+  
   render() {
     let href = Number.isNaN(
       +window.location.href[window.location.href.length - 2]

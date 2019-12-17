@@ -20,8 +20,8 @@ class App extends Component {
       <Router>
         <div className="container">
           <Switch>
+          <Route path="/BuyProducts" component={BuyProduct}></Route>
           <Route exact path="/cart" component={Cart}></Route>
-          <Route exact path="/BuyProduct" component={BuyProduct}></Route>
           <Route exact path="/savedItems" component={SavedItems}></Route>
             <Route path="/products" component={mainProduct}></Route>
             <Route exact path="/" component={SlideShow}></Route>

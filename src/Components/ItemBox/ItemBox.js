@@ -5,22 +5,31 @@ import { connect } from "react-redux";
 import { addToCart } from "../../store/actions/cartActions";
 import { Link } from "react-router-dom";
 import SAVED_ITEMS_ARRAY from "../SavedItems/SavedItemsArray";
+import BUY_PRODUCT_ARRAY from "../buyProduct/buyProductArray";
 
 class ItemBox extends Component {
   state = {
     isAdded: false,
-    isFavorit:false
+    isFavorit: false,
+    buyProduct: false
   };
   handleClick = id => {
     this.props.addToCart(id);
     this.setState({ isAdded: true });
   };
-  handleFavClick = () =>{
-      this.setState({isFavorit:true});
-      if(this.state.isFavorit!=true){
-        SAVED_ITEMS_ARRAY.push(this.props)
-      }
-  }
+  handleFavClick = () => {
+    this.setState({ isFavorit: true });
+    if (this.state.isFavorit != true) {
+      SAVED_ITEMS_ARRAY.push(this.props);
+    }
+  };
+
+  handleBuyClick = () => {
+    this.setState({ buyProduct: true });
+    if (this.state.buyProduct != true) {
+      BUY_PRODUCT_ARRAY.push(this.props);
+    }
+  };
   render() {
     return (
       <Animated
@@ -58,12 +67,18 @@ class ItemBox extends Component {
               >
                 {this.state.isAdded ? "ADDED" : "ADD TO CART"}
               </button>
-              <Link to = '/BuyProduct'><button className="buttonAddToFavorite">QUICK SHOP</button></Link>
+              <Link to={`BuyProducts/${this.props.id}`}>                
+              <button
+                  className="buttonAddToFavorite"
+                  onClick={() => this.handleBuyClick(this.props.id)}
+                >
+                  QUICK SHOP
+                </button>
+              </Link>
               <i
                 style={{ color: this.state.isFavorit ? "#4f6986ef" : "" }}
                 className="fa fa-heart"
-                // onClick={() => SAVED_ITEMS_ARRAY.push(this.props)}
-                onClick = {()=> this.handleFavClick(this.props.id)}
+                onClick={() => this.handleFavClick(this.props.id)}
               ></i>
             </div>
           </div>

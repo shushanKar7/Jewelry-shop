@@ -1,30 +1,29 @@
 import React from "react";
 import { Component } from "react";
 import SAVED_ITEMS_ARRAY from "./SavedItemsArray";
-import { Fragment } from 'react';
-import { Animated } from 'react-animated-css'
-import  HeaderNavbar from '../../Components/HeaderNavbar/HeaderNavbar'
+import { Fragment } from "react";
+import HeaderNavbar from "../HeaderNavbar/HeaderNavbar";
+import earringSectionBg from "../../Images/compHeaderImg/20.jpg";
 
 class SavedItems extends Component {
   render() {
     return (
       <Fragment>
+        <HeaderNavbar background={earringSectionBg}/>
         {
-          <div className="savedItemsWrapper">
-          {SAVED_ITEMS_ARRAY.map(val => {
-            return (
-              <Animated animationIn="fadeInDown" animationOut="fadeOutDown" animationInDuration="2000" isVisible={true}>
+            <div className="savedItemsWrapper">
+              {SAVED_ITEMS_ARRAY.map(val => {
+                return (
                   <div className="savedItemsImgBlock">
                     <img src={val["image"]} />
-                    <div className='savedItemsButtonBlock'>
+                    <div className="savedItemsButtonBlock">
                       <button className="buttonAddToCart">ADD TO CART</button>
                       <button className="buttonAddToFavorite">REMOVE</button>
                     </div>
                   </div>
-              </Animated>
-            )
-          })}
-          </div>
+                );
+              })}
+            </div>
         }
       </Fragment>
     );

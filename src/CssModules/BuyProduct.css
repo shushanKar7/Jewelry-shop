@@ -6,38 +6,73 @@
     background-repeat: no-repeat;
     background-position:center;
 }
-.BuyProductWrapper{width: 80%;margin: auto;}
+
+.BuyProductWrapper{width: 50%;margin: auto;display: flex;padding: 30px;}
+.BuyProductWrapper h1{
+    font-family: "Varela Round" !important;
+}
 .BuyProductWrapper h1,h2,h3{
-    color:#4d1b26;
-    font-family: "Century Gothic", sans-serif;
+    margin: 5px;
+    color:#274354;
+    font-family: "Varela Round";font-family: "Open Sans", sans-serif;
 }
 .BuyProductWrapper h2{
     margin: 5px 0 25px;
+    display: inline-flex;
+}
+.BuyProductWrapper h1{
+    margin: 15px 0;
 }
 .circle{
     width: 40px;
     height: 40px;
     border-radius: 50%;
-    border: 1px solid black;
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     align-items: center;
+    background: #274354;
+    color: white;
+    font-weight: bolder;
+    box-shadow: 0 0 7px #26a0da;
+    margin-right: 20px;
 }
 .BuyProductWrapper form div{
     margin-bottom: 10px;
 }
 .formDiv{
     width: 50%;
+    font-family: "Open Sans", sans-serif;
+}
+.formDiv label{
+    font-family: "Open Sans", sans-serif;
 }
 .formDiv input{
+    width: 426px;
+    padding: 8px;
     border-radius: 3px;
     color: #444;
-    border: 1px solid #4b6473;
-    outline: rebeccapurple;
+    border: 1px solid  #a2bed0;
+    box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.2);
+    transition: .18s ease-out;
 }
+.formDiv input:hover {
+    box-shadow: inset 1px 2px 8px rgba(0, 0, 0, 0.02);
+  }
+  
+.formDiv input:focus {
+    color: #4b515d;
+    border: 1px solid #B8B6B6;
+    box-shadow: inset 1px 2px 4px rgba(0, 0, 0, 0.01), 0px 0px 8px rgba(0, 0, 0, 0.2);
+  }
+  .quickImgBlock p {
+      margin: 10px 0;
+  }
+
+
+
 .BuyProductWrapper label{font-size: 14px;color: black;}
 form{
-    font-family: "Century Gothic", sans-serif;
+    font-family: "Varela Round";
 }
 form select{
     width: 100px;
@@ -45,3 +80,40 @@ form select{
     outline: none;
     border: 1px solid #4b6473;
 }
+.formDiv .buttonAddToCart,.quickImgBlock .buttonAddToCart{
+    background-image: linear-gradient(to right, #314755 0%, #26a0da 51%, #314755 100% ) !important ;
+    margin:15px 0;
+    transition: 0.5s;
+    background-size: 200% auto;
+    display: block;
+    color: white;
+}
+.quickImgBlock .buttonAddToCart{margin: 0;}
+.formDiv .buttonAddToCart:hover { background-position: right center; }
+.quickImgBlock .buttonAddToCart:hover{background-position: right center;}
+.quickImgBlock{
+    width: max-content;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    padding-top: 219px;
+}
+.quickImgBlock img{
+    width: 150px;
+    /* height: 76px; */
+}
+.quickImgBlock input{
+    width: 426px;
+    padding: 8px;
+    border-radius: 3px;
+    color: #444;
+    border: 1px solid  #a2bed0;
+    box-shadow: inset 0px 1px 8px rgba(0, 0, 0, 0.2);
+    transition: .18s ease-out;
+}
+.quickImgBlock{
+    font-size: 18px;
+    color: #274354;
+    font-family: "Open Sans", sans-serif;;
+}
+

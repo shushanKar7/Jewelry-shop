@@ -1,8 +1,3 @@
-.box {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
 .cart h1 {
   text-align: center;
   font-size: 30px;
