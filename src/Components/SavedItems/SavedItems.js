@@ -3,7 +3,7 @@ import { Component } from "react";
 import SAVED_ITEMS_ARRAY from "./SavedItemsArray";
 import { Fragment } from "react";
 import HeaderNavbar from "../HeaderNavbar/HeaderNavbar";
-import earringSectionBg from "../../Images/compHeaderImg/20.jpg";
+import earringSectionBg from "../../Images/compHeaderImg/10.jpg";
 
 class SavedItems extends Component {
   render() {

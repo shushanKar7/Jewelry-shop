@@ -67,7 +67,10 @@
   .quickImgBlock p {
       margin: 10px 0;
   }
-
+  .quickImgBlock img{
+      border-radius: 4px;
+      box-shadow: 0 0 10px #4b6473;
+  }
 
 
 .BuyProductWrapper label{font-size: 14px;color: black;}

@@ -3,8 +3,7 @@ import { Component } from "react";
 import BUY_PRODUCT_ARRAY from "./buyProductArray";
 import { Fragment } from "react";
 import HeaderNavbar from "../HeaderNavbar/HeaderNavbar";
-import earringSectionBg from "../../Images/compHeaderImg/10.jpg";
-
+import earringSectionBg from "../../Images/compHeaderImg/3.jpg";
 class BuyProduct extends Component {
   render() {
     return (

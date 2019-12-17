@@ -1,5 +1,6 @@
-import React, { Component } from "react";
+import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
+import HeaderNavbar from "./HeaderNavbar/HeaderNavbar";
 //import { addShipping } from './actions/cartActions'
 
 class Recipe extends Component {
@@ -12,25 +13,29 @@ class Recipe extends Component {
   };
   render() {
     return (
-      <div className="container">
-        <div className="collection">
-          <li className="collection-item">
-          <label>
-              <div>
-                <input onChange={this.handleChecked} ref="shipping" type="checkbox" id="check" name="check" />
-                <label onChange={this.handleChecked} for="check"></label>
-              </div>
-              <p className = 'emptyText'>Shipping and taxes calculated at checkout(+6$)</p>
-            </label>
-          </li>
-          <li className="collection-item">
-            <div>Total: {this.props.total}$</div>
-          </li>
+      <Fragment>
+        <div className="cartBottom">
+          <div>
+            <input
+              onChange={this.handleChecked}
+              ref="shipping"
+              type="checkbox"
+              id="check"
+              name="check"
+            />
+            <label onChange={this.handleChecked} for="check"></label>
+          </div>
+          <p className="emptyText">
+            Shipping and taxes calculated at checkout(+6$)
+          </p>
+          <div className='total'>Total: {this.props.total}$</div>
+          <div className="checkout">
+            <button style={{ width: "200px" }} className="buttonAddToCart">
+              PROCEED TO CHECKOUT
+            </button>
+          </div>
         </div>
-        <div className="checkout">
-          <button style = {{width:'200px'}} className="buttonAddToCart">PROCEED TO CHECKOUT</button>
-        </div>
-      </div>
+      </Fragment>
     );
   }
 }

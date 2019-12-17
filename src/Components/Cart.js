@@ -2,12 +2,15 @@ import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
 import Recipe from "../Components/Recipe";
 import { Link } from "react-router-dom";
+import braceletSectionBg from '../Images/compHeaderImg/33.png'
+
 
 import {
   removeItem,
   addQuantity,
   subtractQuantity
 } from "../store/actions/cartActions";
+import HeaderNavbar from "./HeaderNavbar/HeaderNavbar";
 
 class Cart extends Component {
   //to remove the item completely
@@ -26,56 +29,65 @@ class Cart extends Component {
     let addedItems = this.props.products.length ? (
       this.props.products.map(product => {
         return (
-          <li className="productList" key={product.id}>
-            <div className="productImg">
-              <img src={product.image} alt={product.img} className="" />
-            </div>
-            <div className="itemDesc">
-              <span className="title">{product.title}</span>
-              <p>{product.desc}</p>
-              <div className="productInfo">
-                <p>Price: {product.price}$</p>
+          <Fragment>
+            <li className="productList" key={product.id}>
+              <div className="productImg">
+                <img src={product.image} alt={product.img} className="" />
               </div>
-              <div className="productInfo">
-                <p>Quantity: {product.quantity}</p>
-              </div>
-              <div className="add-remove">
-                <Link to='/cart'>
-                <i
-                  className="fa fa-angle-up"
+              <div className="itemDesc">
+                <span className="title">{product.title}</span>
+                <p>{product.desc}</p>
+                <div className="productInfo">
+                  <p>Price: {product.price}$</p>
+                </div>
+                <div className="productInfo">
+                  <p>Quantity: {product.quantity}</p>
+                </div>
+                <div className="add-remove">
+                  <Link to="/cart">
+                    <i
+                      className="fa fa-angle-up"
+                      onClick={() => {
+                        this.handleAddQuantity(product.id);
+                      }}
+                    ></i>
+                  </Link>
+                  <Link to="/cart">
+                    <i
+                      className="fa fa-angle-down"
+                      onClick={() => {
+                        this.handleSubtractQuantity(product.id);
+                      }}
+                    ></i>
+                  </Link>
+                </div>
+                <button
+                  className="removeButton"
                   onClick={() => {
-                    this.handleAddQuantity(product.id);
+                    this.handleRemove(product.id);
                   }}
-                ></i></Link>
-                <Link to='/cart'>
-                <i
-                  className="fa fa-angle-down"
-                  onClick={() => {
-                    this.handleSubtractQuantity(product.id);
-                  }}
-                ></i></Link>
+                >
+                  Remove
+                </button>
               </div>
-              <button
-                className="removeButton"
-                onClick={() => {
-                  this.handleRemove(product.id);
-                }}
-              >
-                Remove
-              </button>
-            </div>
-          </li>
+            </li>
+          </Fragment>
         );
       })
-    ) : (
+    ) 
+    : (
+  
+      <div className='cartEmptyText'>
       <p className="emptyText">You don't have any items in your cart yet.</p>
+      </div>
     );
     return (
       <Fragment>
-        <div className="cart">
-          <h1>YOUR CART</h1>
-          <ul className="collection">{addedItems}</ul>
-          <Recipe />
+        <HeaderNavbar background={braceletSectionBg}/>
+        <div className="cartWrapper">
+          <h1 className='cartText'>YOUR CART</h1>
+          <ul className="productCollection">{addedItems}</ul>
+          <Recipe/>
         </div>
       </Fragment>
     );
