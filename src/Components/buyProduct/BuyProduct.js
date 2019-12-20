@@ -44,7 +44,7 @@ class BuyProduct extends Component {
                   <label>Address</label>
                   <input
                     type="text"
-                    placeholder="Street address, company name, c/o"
+                    placeholder="Street address"
                     required
                   ></input>
                 </div>
@@ -68,11 +68,11 @@ class BuyProduct extends Component {
                 <div style={{ display: '-webkit-inline-box' }}>
                   <div >
                     <label>Zip</label>
-                    <input style={{ width: '200px' }} type="number" placeholder="eg. 89101" required></input>
+                    <input style={{ width: '9.190vw',minWidth:'118px' }} type="number" placeholder="eg. 89101" required></input>
                   </div>
                   <div   >
                     <label>City</label>
-                    <input style={{ width: '200px', margin: ' 0 7px' }} type="text" placeholder="eg. Yerevan" required></input>
+                    <input style={{ width: '9.190vw',minWidth:'118px', margin: ' 0 7px' }} type="text" placeholder="eg. Yerevan" required></input>
                   </div>
                 </div>
 

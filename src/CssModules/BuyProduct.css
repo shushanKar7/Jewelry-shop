@@ -7,7 +7,13 @@
     background-position:center;
 }
 
-.BuyProductWrapper{width: 50%;margin: auto;display: flex;padding: 30px;}
+.BuyProductWrapper{
+    width: 70%;
+    display: flex;
+    padding: 30px;
+    justify-content: center;
+    margin: auto;
+}
 .BuyProductWrapper h1{
     font-family: "Varela Round" !important;
 }
@@ -40,14 +46,17 @@
     margin-bottom: 10px;
 }
 .formDiv{
-    width: 50%;
+    /* width: 50%; */
     font-family: "Open Sans", sans-serif;
 }
 .formDiv label{
     font-family: "Open Sans", sans-serif;
 }
 .formDiv input{
-    width: 426px;
+    width: 95%;
+    /* width: 20.286vw; */
+    min-width: 262px;
+    /* width: 426px; */
     padding: 8px;
     border-radius: 3px;
     color: #444;
@@ -95,6 +104,7 @@ form select{
 .formDiv .buttonAddToCart:hover { background-position: right center; }
 .quickImgBlock .buttonAddToCart:hover{background-position: right center;}
 .quickImgBlock{
+
     width: max-content;
     margin: 20px;
     padding: 20px;
@@ -120,3 +130,19 @@ form select{
     font-family: "Open Sans", sans-serif;;
 }
 
+@media screen and (max-width: 1000px) {
+    .BuyProductWrapper {
+      display: flex;
+      flex-wrap: wrap;
+    }
+    .quickImgBlock{
+        padding-top: 20px;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .quickImgBlock {
+        width: 310px;
+    }
+
+  }

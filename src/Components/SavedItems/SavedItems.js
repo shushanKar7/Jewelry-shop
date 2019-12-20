@@ -6,6 +6,14 @@ import HeaderNavbar from "../HeaderNavbar/HeaderNavbar";
 import earringSectionBg from "../../Images/compHeaderImg/10.jpg";
 
 class SavedItems extends Component {
+  removeSavedItem ( id ) {
+    for ( let i = 0; i < SAVED_ITEMS_ARRAY.length; i++ ) {
+      if ( SAVED_ITEMS_ARRAY[i].id === id )
+        SAVED_ITEMS_ARRAY.splice ( i, 1 );
+    }
+    this.forceUpdate();
+  }
+
   render() {
     return (
       <Fragment>
@@ -18,7 +26,7 @@ class SavedItems extends Component {
                     <img src={val["image"]} />
                     <div className="savedItemsButtonBlock">
                       <button className="buttonAddToCart">ADD TO CART</button>
-                      <button className="buttonAddToFavorite">REMOVE</button>
+                      <button className="buttonAddToFavorite" onClick ={() =>  this.removeSavedItem(val.id)}>REMOVE</button>
                     </div>
                   </div>
                 );
