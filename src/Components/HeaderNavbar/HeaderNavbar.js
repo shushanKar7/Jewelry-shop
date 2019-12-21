@@ -3,9 +3,15 @@ import { Component } from "react";
 import { Link, NavLink } from "react-router-dom";
 import { connect } from "react-redux";
 import { Animated } from "react-animated-css";
-import Cart from "../Cart";
 
 class HeaderNavbar extends Component {
+  state = {
+    isLoggedIn: localStorage.getItem('isLoggedIn')
+  }
+  goToSingIn() {
+    localStorage.setItem('isLoggedIn', false);
+    this.setState ( { isLoggedIn: false } );
+  }
   render() {
     const styleNav = {
       textShadow: "0 0 12px white",
@@ -25,14 +31,16 @@ class HeaderNavbar extends Component {
           <Animated
             animationIn="fadeInDown"
             animationOut="fadeOutDown"
-            animationInDuration="2000"
+            animationInDuration={2000}
             isVisible={true}
           >
-            <i className="fa fa-user">
-              <Link className="routerLink" to="/SignIn">
-                <span>Sign in</span>
-              </Link>
-            </i>
+            {
+              this.state.isLoggedIn ? <span onClick={this.goToSingIn}><i className="fa fa-user"></i>Log out</span> : <i className="fa fa-user">
+                <Link className="routerLink" to="/SignIn">
+                  <span>Sign in</span>
+                </Link>
+              </i>
+            }
             <Link to="/saveditems">
               <i className="fa fa-heart fa-heartt">
                 <span>Saved Items</span>
@@ -46,12 +54,12 @@ class HeaderNavbar extends Component {
               </i></Link>
           </Animated>
         </div>
-        <Link className = 'logoLink' 
-        to="/">
+        <Link className='logoLink'
+          to="/">
           <Animated
             animationIn="fadeInDown"
             animationOut="fadeOutDown"
-            animationInDuration="2000"
+            animationInDuration={2000}
             isVisible={true}
           >
             <div className="logo"></div>
@@ -60,7 +68,7 @@ class HeaderNavbar extends Component {
         <Animated
           animationIn="fadeInDown"
           animationOut="fadeOutDown"
-          animationInDuration="2000"
+          animationInDuration={2000}
           isVisible={true}
         >
           <div className="navBar">

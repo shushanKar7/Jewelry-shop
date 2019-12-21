@@ -4,12 +4,13 @@ import "./index.css";
 import App from "./Components/App";
 import * as serviceWorker from "./serviceWorker";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
+import { createStore, applyMiddleware } from "redux";
 import cartReducer from './store/reducers/productReducer'
+import thunk from 'redux-thunk'
 
 
 
-let store = createStore(cartReducer);
+let store = createStore(cartReducer,applyMiddleware(thunk));
 
 ReactDOM.render(
   <Provider store={store}>

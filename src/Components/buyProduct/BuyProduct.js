@@ -79,7 +79,7 @@ class BuyProduct extends Component {
                 <label>
                   <div>
                     <input type="checkbox" id="check" name="check" />
-                    <label for="check"></label>
+                    <label htmlFor="check"></label>
                   </div>
                 </label>
                 <button style={{ width: "200px" }} className="buttonAddToCart">
@@ -102,12 +102,12 @@ class BuyProduct extends Component {
               <Fragment>
                 {BUY_PRODUCT_ARRAY.map(value => {
                   return (
-                    <div className="quickImgBlock">
-                      <div style={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid lightgray', paddingBottom: '36px' }}>
-                        <img src={value["image"]} />
-                        <div style={{ display: 'flex', margin: '0px 15px' }}>
-                          <p>{value['name']}</p>
-                          <p>{value["price"]}$</p>
+                    <div className="quickImgBlock" key={'imgKey'}>
+                      <div style={{ display: 'flex', alignItems: 'center', borderBottom: '1px solid lightgray', paddingBottom: '36px' }} key={'styleKey'}>
+                        <img src={value["image"]} alt='buyProductImg' key={'productKey'}/>
+                        <div style={{ display: 'flex', margin: '0px 15px' }} ky={'descKEY'}>
+                          <p key={'nameKey'}>{value['name']}</p>
+                          <p key={'priceKey'}>{value["price"]}$</p>
                         </div>
                       </div>
                       <div style={{

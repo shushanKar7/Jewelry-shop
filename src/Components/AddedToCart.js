@@ -28,7 +28,7 @@ let mapStateToProps = state => {
     return {
       addToCart: id => {
         dispatch(addToCart(id));
-      }
+      },
     };
   };
   

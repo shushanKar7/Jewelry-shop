@@ -1,6 +1,5 @@
 import React from "react";
 import { Fragment } from "react";
-import { Animated } from "react-animated-css";
 
 
 const Footer = () => {
@@ -54,24 +53,24 @@ const Footer = () => {
             Friendship, Serenity & Calmness and <br/> many more! Each intention
             gathers a selection of <br/> gemstones to attract a specific energy. 
           </p>
-          <div class="social">
-            <a class="link facebook" target="_parent" href="faebook.com">
-              <span class="fa fa-facebook-square"></span>
+          <div className="social">
+            <a className="link facebook" target="_parent" href="faebook.com">
+              <span className="fa fa-facebook-square"></span>
             </a>
             <a className="link twitter" target="_parent" href="titter.com">
               <span className="fa fa-twitter"></span>
             </a>
-            <a class="link instagram" target="_parent" href="instagram.com">
-              <span class="fa fa-instagram"></span>
+            <a className="link instagram" target="_parent" href="instagram.com">
+              <span className="fa fa-instagram"></span>
             </a>
-            <a class="link youtube" target="_parent" href="youtube.com">
-              <span class="fa fa-youtube"></span>
+            <a className="link youtube" target="_parent" href="youtube.com">
+              <span className="fa fa-youtube"></span>
             </a>
-            <a class="link linkedin" target="_parent" href="linkedin.com">
-              <span class="fa fa-linkedin"></span>
+            <a className="link linkedin" target="_parent" href="linkedin.com">
+              <span className="fa fa-linkedin"></span>
             </a>
-            <a class="link pinterest" target="_parent" href="pinterest.com">
-              <span class="fa fa-pinterest"></span>
+            <a className="link pinterest" target="_parent" href="pinterest.com">
+              <span className="fa fa-pinterest"></span>
             </a>
           </div>
         </div>

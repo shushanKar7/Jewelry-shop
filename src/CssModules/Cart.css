@@ -18,12 +18,15 @@
   font-family: "Century Gothic", sans-serif;
   font-size: 14px;
   padding: 7px 0;
+
 }
 
 .total {
   color: black;
   font-family: "Century Gothic", sans-serif;
   font-size: 14px;
+  padding-bottom:10px;
+
 }
 
 .cartWrapper h1 {

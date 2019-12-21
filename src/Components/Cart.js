@@ -29,8 +29,7 @@ class Cart extends Component {
     let addedItems = this.props.products.length ? (
       this.props.products.map(product => {
         return (
-          <Fragment>
-            <li className="productList" key={product.id}>
+            <li className="productList" key='list' >
               <div className="productImg">
                 <img src={product.image} alt={product.img} className="" />
               </div>
@@ -71,7 +70,6 @@ class Cart extends Component {
                 </button>
               </div>
             </li>
-          </Fragment>
         );
       })
     ) 

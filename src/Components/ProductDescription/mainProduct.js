@@ -6,13 +6,27 @@ import earringSectionBg from "../../Images/compHeaderImg/earringSection.jpg";
 import Footer from "../sectionFooter/Footer";
 import { connect } from "react-redux";
 import { addToCart } from "../../store/actions/cartActions";
+import SAVED_ITEMS_ARRAY from "../SavedItems/SavedItemsArray";
 
 class mainProduct extends Component {
-  handleClick = id => {
-    this.props.addToCart(id);
-    console.log(this.props.addToCart)
+  state = {
+    isFavorit: false,
+    isAdded: false,
+
   };
-  
+
+  handleClick = () => {
+    this.setState({ isAdded: true });
+  };
+
+  addItem(PRODUCT) {
+    this.setState({ isFavorit: true });
+    for (let i = 0; i < this.props.products.length; i++) {
+      if (this.props.products[i].id === PRODUCT.id) return false;
+    }
+    SAVED_ITEMS_ARRAY.push(PRODUCT);
+  }
+
   render() {
     let href = Number.isNaN(
       +window.location.href[window.location.href.length - 2]
@@ -23,8 +37,6 @@ class mainProduct extends Component {
         +window.location.href[window.location.href.length - 1];
     href = +href;
     const PRODUCT = this.props.products[href];
-    console.log(href);
-    console.log(this.props.products);
     return (
       <Fragment>
         <HeaderNavbar background={earringSectionBg} />
@@ -34,9 +46,9 @@ class mainProduct extends Component {
               animationIn="fadeInLeft"
               animationOut="fadeOutLeft"
               isVisible={true}
-              animationInDuration = '2000'
+              animationInDuration={2000}
             >
-              <img src={PRODUCT["image"]} />
+              <img src={PRODUCT["image"]} alt='mainProductImg'/>
             </Animated>
           </div>
           <div className="productDescription">
@@ -44,25 +56,31 @@ class mainProduct extends Component {
               animationIn="fadeInRight"
               animationOut="fadeOutRight"
               isVisible={true}
-              animationInDuration = '2000'
+              animationInDuration={2000}
             >
               <span>{PRODUCT["name"]}</span>
               <p>{PRODUCT["zodiac"]}</p>
               <p>{PRODUCT["description"]}</p>
               <p>
-              All our jewellery are made of sterling 925 Silver, 
-              handmade and hand-picked one by one. So it will be like having a unique piece on you.
+                All our jewellery are made of sterling 925 Silver, handmade and
+                hand-picked one by one. So it will be like having a unique piece
+                on you.
               </p>
               <div className="itemBoxButton">
-                <button
-                  className="buttonAddToCart"
-                  onClick={() => {
-                    this.handleClick(this.props.id);
-                  }}
+                <button className="buttonAddToCart"
+                disabled={this.state.isAdded}
+                style={{ background: this.state.isAdded ? "#274354" : "" }}
+                onClick={() => {
+                  this.handleClick();
+                }}
                 >
-                  ADD TO CART
+                  {this.state.isAdded ? "ADDED" : "ADD TO CART"}{" "}
                 </button>
-                <i className="fa fa-heart"></i>
+                <i
+                  className="fa fa-heart"
+                  style={{ color: this.state.isFavorit ? "#4f6986ef" : "" }}
+                  onClick={() => this.addItem(PRODUCT)}
+                ></i>
               </div>
             </Animated>
           </div>

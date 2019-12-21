@@ -19,14 +19,14 @@ class ItemBox extends Component {
   };
   handleFavClick = () => {
     this.setState({ isFavorit: true });
-    if (this.state.isFavorit != true) {
+    if (this.state.isFavorit !== true) {
       SAVED_ITEMS_ARRAY.push(this.props);
     }
   };
 
   handleBuyClick = () => {
     this.setState({ buyProduct: true });
-    if (this.state.buyProduct != true) {
+    if (this.state.buyProduct !== true) {
       BUY_PRODUCT_ARRAY.push(this.props);
     }
   };
@@ -35,7 +35,7 @@ class ItemBox extends Component {
       <Animated
         animationIn="fadeInDown"
         animationOut="fadeOutDown"
-        animationInDuration="2000"
+        animationInDuration={2000}
         isVisible={true}
       >
         <div className="itemBox">

@@ -20,9 +20,9 @@ class App extends Component {
       <Router>
         <div className="container">
           <Switch>
-          <Route path="/BuyProducts" component={BuyProduct}></Route>
-          <Route exact path="/cart" component={Cart}></Route>
-          <Route exact path="/savedItems" component={SavedItems}></Route>
+            <Route path="/BuyProducts" component={BuyProduct}></Route>
+            <Route exact path="/cart" component={Cart}></Route>
+            <Route exact path="/savedItems" component={SavedItems}></Route>
             <Route path="/products" component={mainProduct}></Route>
             <Route exact path="/" component={SlideShow}></Route>
             <Route path="/SignUp" component={SignUp}></Route>
@@ -35,15 +35,20 @@ class App extends Component {
           </Switch>
         </div>
       </Router>
+
     );
   }
 }
 
-let mapStateToProps = state => {
+const mapStateToProps = state => {
   return {
     openSignIn: state.openSignIn,
     sectionName: state.sectionName
   };
 };
+
+
+
+
 
 export default connect(mapStateToProps)(App);

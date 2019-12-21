@@ -1,7 +1,6 @@
 import React, { Component, Fragment } from "react";
 import { connect } from "react-redux";
-import HeaderNavbar from "./HeaderNavbar/HeaderNavbar";
-//import { addShipping } from './actions/cartActions'
+
 
 class Recipe extends Component {
   handleChecked = e => {
@@ -23,7 +22,7 @@ class Recipe extends Component {
               id="check"
               name="check"
             />
-            <label onChange={this.handleChecked} for="check"></label>
+            <label onChange={this.handleChecked} htmlFor="check"></label>
           </div>
           <p className="emptyText">
             Shipping and taxes calculated at checkout(+6$)

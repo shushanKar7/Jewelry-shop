@@ -62,7 +62,6 @@ const cartReducer= (state = initialState,action)=>{
         }
   }
   if(action.type=== SUB_QUANTITY){
-      console.log(state.products);  
       let addedItem = state.products.find(product=> product.id === action.id) 
       //if the qt == 0 then it should be removed
       if(addedItem.quantity === 1){
