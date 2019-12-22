@@ -21,9 +21,9 @@ class SavedItems extends Component {
             
             
             {
-            SAVED_ITEMS_ARRAY.map((val,id=1) => {
+            SAVED_ITEMS_ARRAY.map((val,idKeySaved=1) => {
               return (
-                <div key = {id++} className="savedItemsImgBlock" key='savedItems'>
+                <div key = {idKeySaved++} className="savedItemsImgBlock">
                   <img src={val["image"]} alt="productImg" />
                   <div className="savedItemsButtonBlock" >
                     <button className="buttonAddToCart">ADD TO CART</button>

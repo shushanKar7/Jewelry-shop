@@ -4,7 +4,6 @@ import Recipe from "../Components/Recipe";
 import { Link } from "react-router-dom";
 import braceletSectionBg from '../Images/compHeaderImg/33.png'
 
-
 import {
   removeItem,
   addQuantity,
@@ -27,9 +26,9 @@ class Cart extends Component {
   };
   render() {
     let addedItems = this.props.products.length ? (
-      this.props.products.map(product => {
+      this.props.products.map((product,idKey) => {
         return (
-            <li className="productList" key='list' >
+            <li className="productList" key={idKey++} >
               <div className="productImg">
                 <img src={product.image} alt={product.img} className="" />
               </div>
