@@ -18,25 +18,25 @@ class SavedItems extends Component {
         <HeaderNavbar background={earringSectionBg} />
         {
           <div className="savedItemsWrapper">
-            
-            
+
+
             {
-            SAVED_ITEMS_ARRAY.map((val,idKeySaved=1) => {
-              return (
-                <div key = {idKeySaved++} className="savedItemsImgBlock">
-                  <img src={val["image"]} alt="productImg" />
-                  <div className="savedItemsButtonBlock" >
-                    <button className="buttonAddToCart">ADD TO CART</button>
-                    <button
-                      className="buttonAddToFavorite"
-                      onClick={() => this.removeSavedItem(val.id)}
-                    >
-                      REMOVE
+              SAVED_ITEMS_ARRAY.map((val, idKeySaved = 1) => {
+                return (
+                  <div key={idKeySaved++} className="savedItemsImgBlock">
+                    <img src={val["image"]} alt="productImg" />
+                    <div className="savedItemsButtonBlock" >
+                      <button className="buttonAddToCart">ADD TO CART</button>
+                      <button
+                        className="buttonAddToFavorite"
+                        onClick={() => this.removeSavedItem(val.id)}
+                      >
+                        REMOVE
                     </button>
+                    </div>
                   </div>
-                </div>
-              );
-            })}
+                );
+              })}
           </div>
         }
       </Fragment>

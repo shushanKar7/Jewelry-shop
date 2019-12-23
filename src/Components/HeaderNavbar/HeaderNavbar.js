@@ -6,13 +6,17 @@ import { Animated } from "react-animated-css";
 
 class HeaderNavbar extends Component {
   state = {
-    isLoggedIn: localStorage.getItem('isLoggedIn')
-  }
-  goToSingIn() {
-    localStorage.setItem('isLoggedIn', false);
-    this.setState ( { isLoggedIn: false } );
-  }
+    isLoggedIn: localStorage.getItem("isLoggedIn")
+
+  };
+  goToSingIn = () => {
+    localStorage.setItem("isLoggedIn", false);
+    this.setState({ isLoggedIn: false });
+  };
   render() {
+
+    console.log(this.state.isLoggedIn);
+    
     const styleNav = {
       textShadow: "0 0 12px white",
       borderBottom: "2px solid white"
@@ -27,7 +31,9 @@ class HeaderNavbar extends Component {
           backgroundPosition: "center"
         }}
       >
-        <div className="accountCartBlcok">
+
+        <div
+            className="accountCartBlcok">
           <Animated
             animationIn="fadeInDown"
             animationOut="fadeOutDown"
@@ -35,7 +41,7 @@ class HeaderNavbar extends Component {
             isVisible={true}
           >
             {
-              this.state.isLoggedIn ? <span onClick={this.goToSingIn}><i className="fa fa-user"></i>Log out</span> : <i className="fa fa-user">
+             this.state.isLoggedIn ? <span onClick={this.goToSingIn}><i className="fa fa-user"></i>Log out</span> : <i className="fa fa-user">
                 <Link className="routerLink" to="/SignIn">
                   <span>Sign in</span>
                 </Link>

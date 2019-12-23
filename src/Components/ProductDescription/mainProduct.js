@@ -10,9 +10,8 @@ import SAVED_ITEMS_ARRAY from "../SavedItems/SavedItemsArray";
 
 class mainProduct extends Component {
   state = {
-    isFavorit: false,
+    isFavorite: null,
     isAdded: false,
-
   };
 
   handleClick = () => {
@@ -20,7 +19,7 @@ class mainProduct extends Component {
   };
 
   addItem(PRODUCT) {
-    this.setState({ isFavorit: true });
+    this.setState({ isFavorite: "#4f6986ef" });
     for (let i = 0; i < this.props.products.length; i++) {
       if (this.props.products[i].id === PRODUCT.id) return false;
     }
@@ -33,8 +32,8 @@ class mainProduct extends Component {
     )
       ? +window.location.href[window.location.href.length - 1]
       : +window.location.href[window.location.href.length - 2] +
-        "" +
-        +window.location.href[window.location.href.length - 1];
+      "" +
+      +window.location.href[window.location.href.length - 1];
     href = +href;
     const PRODUCT = this.props.products[href];
     return (
@@ -48,7 +47,7 @@ class mainProduct extends Component {
               isVisible={true}
               animationInDuration={2000}
             >
-              <img src={PRODUCT["image"]} alt='mainProductImg'/>
+              <img src={PRODUCT["image"]} alt='mainProductImg' />
             </Animated>
           </div>
           <div className="productDescription">
@@ -68,17 +67,17 @@ class mainProduct extends Component {
               </p>
               <div className="itemBoxButton">
                 <button className="buttonAddToCart"
-                disabled={this.state.isAdded}
-                style={{ background: this.state.isAdded ? "#274354" : "" }}
-                onClick={() => {
-                  this.handleClick();
-                }}
+                  disabled={this.state.isAdded}
+                  style={{ background: this.state.isAdded ? "#274354" : "" }}
+                  onClick={() => {
+                    this.handleClick();
+                  }}
                 >
                   {this.state.isAdded ? "ADDED" : "ADD TO CART"}{" "}
                 </button>
                 <i
                   className="fa fa-heart"
-                  style={{ color: this.state.isFavorit ? "#4f6986ef" : "" }}
+                  style={{ color: this.state.isFavorite }}
                   onClick={() => this.addItem(PRODUCT)}
                 ></i>
               </div>

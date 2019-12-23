@@ -1,38 +1,39 @@
 import React from "react";
-import { Fragment, createRef } from "react";
+import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Component } from "react";
 import { Animated } from "react-animated-css";
-import { getUser } from "../../actions/usersActions";
 import { connect } from "react-redux";
+import { logIn } from "../../store/actions/axiosAction";
+
 
 const validateForm = errors => {
   let valid = true;
   Object.values(errors).forEach(val => val.length > 0 && (valid = false));
   return valid;
-};
-const countErrors = errors => {
-  let count = 0;
-  Object.values(errors).forEach(val => val.length > 0 && (count = count + 1));
-  return count;
-};
-// const isLoggedIn = isLogged;
+},
+  countErrors = errors => {
+    let count = 0;
+    Object.values(errors).forEach(val => val.length > 0 && (count = count + 1));
+    return count;
+  };
 class SignIn extends Component {
   state = {
     formValid: false,
     errorCount: null,
     user: {
-      username: "",
+      Email: "",
       password: ""
-    }
+    },
+    isLogged: false
   };
   handleChange = event => {
     event.preventDefault();
     const { name, value } = event.target;
     let errors = this.state.user;
     switch (name) {
-      case "username":
-        errors.username =
+      case "Email":
+        errors.Email =
           value.length < 5 ? "Username must be 5 characters long!" : value;
         break;
       case "password":
@@ -50,19 +51,28 @@ class SignIn extends Component {
     this.setState({ errorCount: countErrors(this.state.user) });
   };
   signIn = () => {
-    //const { username, password } = this.state.user;
-    console.log(localStorage);
+    let { Email, password } = this.state.errors;
+    this.setState({ isLogged: true }, () => console.log(this.state.isLogged));
+
+    if ((localStorage.getItem('username') === Email || localStorage.getItem('email') === Email) && localStorage.getItem('password') === password) {
+      this.setState({ isLogged: true }, () => console.log(this.state.isLogged));
+      this.props.history.push('/')
+      localStorage.setItem("isLoggedIn", true)
+    }
+     this.props.logIn(this.state.errors)
   };
-  divRef = createRef();
+  divRef;
   render() {
     const { user } = this.state;
+    console.log(this.state.isLogged)
+
     return (
       <Fragment>
         <div className="wrapper">
           <div className="box1">
             <div className="content">
               <Link to="./">
-                <div className="registerLogo" ref={this.divRef}></div>
+                <div className="registerLogo" ref={div => { this.divRef = div; return div; }}></div>
               </Link>
             </div>
           </div>
@@ -81,14 +91,14 @@ class SignIn extends Component {
                       <input
                         type="text"
                         required
-                        name="username"
-                        id="username"
+                        name="Email"
+                        id="Email"
                         placeholder="Enter Your Name"
                         onChange={this.handleChange}
                         noValidate
                       />
-                      {user.username.length > 0 && (
-                        <span className="error">{user.username}</span>
+                      {user.Email.length > 0 && (
+                        <span className="error">{user.Email}</span>
                       )}
                     </div>
                     <div>
@@ -134,9 +144,5 @@ let mapStateToProps = state => {
   };
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    getUser: () => dispatch(getUser)
-  };
-};
-export default connect(mapStateToProps, mapDispatchToProps)(SignIn);
+export default connect(mapStateToProps, { logIn })(SignIn);
+

@@ -3,16 +3,19 @@ import { Fragment } from "react";
 import { Link } from "react-router-dom";
 import { Component } from "react";
 import { Animated } from "react-animated-css";
+import { connect } from 'react-redux';
+import { signUp } from '../../store/actions/axiosAction';
+import { bindActionCreators } from "../../../../../AppData/Local/Microsoft/TypeScript/3.6/node_modules/redux";
 
 const validEmailRegex = RegExp(/^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/)
 const validateForm = errors => {
   let valid = true;
-  Object.values(errors).forEach(val => val.length > 0 && (valid = false));
+  Object.values(errors).forEach(val => val && val.length > 0 && (valid = false));
   return valid;
 };
 const countErrors = errors => {
   let count = 0;
-  Object.values(errors).forEach(val => val.length > 0 && (count = count + 1));
+  Object.values(errors).forEach(val => val && val.length > 0 && (count = count + 1));
   return count;
 };
 class SignUp extends Component {
@@ -46,17 +49,17 @@ class SignUp extends Component {
     switch (name) {
       case "firstName":
         errors.firstName =
-          value.length < 5 ? "Name must be 5 characters long!" : "";
+          value.length < 5 ? "Name must be 5 characters long!" : null;
         inputValues.firstName = value;
         break;
       case "lastName":
         errors.lastName =
-          value.length < 2 ? "Name must be 2 characters long!" : "";
+          value.length < 2 ? "Name must be 2 characters long!" : null;
         inputValues.lastName = value;
         break;
       case "username":
         errors.username =
-          value.length < 5 ? "Surname must be 5 characters long!" : "";
+          value.length < 5 ? "Surname must be 5 characters long!" : null;
         inputValues.username = value;
         break;
       case "email":
@@ -77,9 +80,8 @@ class SignUp extends Component {
             : "";
         inputValues.confirmPassword = value;
         break;
-        default: return null
+      default: return null
     }
-
     this.setState({ errors, [name]: value });
   };
   post = (url, object) => {
@@ -91,43 +93,13 @@ class SignUp extends Component {
       body: JSON.stringify(object)
     });
   };
-  generateInput = (input = "") => {
-    if (input.indexOf("@") !== -1) {
-      let result = "",
-        sub = 0,
-        prev = 0;
-      for (let i = 0; i < input.indexOf("@"); i++) {
-        if (input[i].charCodeAt() >= 48 && input[i].charCodeAt() <= 57) {
-          result += input[i];
-        } else {
-          let counter = input[i].charCodeAt() - 97;
-          sub = counter - prev;
-          if (sub < 0) sub = sub + 26;
-          result += String.fromCharCode(sub + 97);
-          prev = counter;
-        }
-      }
-      return result + input.slice(input.indexOf("@"));
-    } else {
-      let result = "",
-        sub = 0,
-        prev = 0;
-      for (let i = 0; i < input.length; i++) {
-        let counter = input[i].charCodeAt() - 97;
-        sub = counter - prev;
-        if (sub < 0) sub = sub + 26;
-        result += String.fromCharCode(sub + 97);
-        prev = counter;
-      }
-      return result;
-    }
-  };
   handleSubmit = event => {
     event.preventDefault();
     this.setState({ formValid: validateForm(this.state.user) });
     this.setState({ errorCount: countErrors(this.state.user) });
     setTimeout(() => {
       if (this.state.formValid === true) {
+        this.props.history.push('/SignIn')
         const {
           email,
           username,
@@ -137,27 +109,20 @@ class SignUp extends Component {
           confirmPassword
         } = this.state.form;
         const user = {
-          email: this.generateInput(email),
-          username: this.generateInput(username),
-          firstName: this.generateInput(firstName),
-          lastName: this.generateInput(lastName),
-          password: this.generateInput(password),
-          confirmPassword: this.generateInput(confirmPassword)
+          email: email,
+          username: username,
+          firstName: firstName,
+          lastName: lastName,
+          password: password,
+          confirmPassword: confirmPassword,
         };
-        const thenable = this.post(
-          "http://192.168.5.69:8001/api/Users/Register",
-          user
-        );
-        thenable
-          .then(res => res.json())
-          .then(response => {
-            console.log(response);
-            localStorage.setItem(response.username, `${response.token}`);
-            localStorage.setItem(`isLoggedIn`, true);
-          })
-          .catch(console.log);
+        for (let key in user) {
+          localStorage.setItem(key, user[key]);
+        }
       }
     }, 0);
+    this.props.signUp(this.state.form);
+
   };
   showError = () => {
     this.setState({ serverError: true });
@@ -197,7 +162,7 @@ class SignUp extends Component {
                         placeholder="Enter Your Name"
                         onChange={this.handleChange}
                       />
-                      {user.firstName.length > 0 && (
+                      {user.firstName && user.firstName.length > 0 && (
                         <span className="error">{user.firstName}</span>
                       )}
                     </div>
@@ -212,7 +177,7 @@ class SignUp extends Component {
                         placeholder="Enter Your Surname"
                         onChange={this.handleChange}
                       />
-                      {user.lastName.length > 0 && (
+                      {user.lastName && user.lastName.length > 0 && (
                         <span className="error">{user.lastName}</span>
                       )}
                     </div>
@@ -225,7 +190,7 @@ class SignUp extends Component {
                         placeholder="Enter Your Username"
                         onChange={this.handleChange}
                       />
-                      {user.username.length > 0 && (
+                      {user.username && user.username.length > 0 && (
                         <span className="error">{user.username}</span>
                       )}
                     </div>
@@ -239,7 +204,7 @@ class SignUp extends Component {
                         placeholder="Enter Your Email"
                         onChange={this.handleChange}
                       />
-                      {user.email.length > 0 && (
+                      {user.email && user.email.length > 0 && (
                         <span className="error">{user.email}</span>
                       )}
                     </div>
@@ -253,7 +218,7 @@ class SignUp extends Component {
                         placeholder="Enter Password"
                         onChange={this.handleChange}
                       />
-                      {user.password.length > 0 && (
+                      {user.password && user.password.length > 0 && (
                         <span className="error">{user.password}</span>
                       )}
                     </div>
@@ -289,4 +254,15 @@ class SignUp extends Component {
     );
   }
 }
-export default SignUp;
+
+const mapStateToProps = state => {
+  return {
+    products: state.addedItems
+  };
+};
+
+const mapDispatchToProps = dispatch => {
+  return bindActionCreators({ signUp }, dispatch)
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);
