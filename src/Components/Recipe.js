@@ -14,8 +14,7 @@ class Recipe extends Component {
     return (
       <Fragment>
         <div className="cartBottom">
-
-          <p className="emptyText">
+        <div style = {{display:'flex',alignItems:'center'}}>
           <div>
             <input
               onChange={this.handleChecked}
@@ -26,9 +25,10 @@ class Recipe extends Component {
             />
             <label onChange={this.handleChecked} htmlFor="check"></label>
           </div>
-
+          <p className="emptyText">
             Shipping and taxes calculated at checkout(+6$)
           </p>
+          </div>
           <div className='total'>Total: {this.props.total}$</div>
           <div className="checkout">
             <button style={{ width: "200px" }} className="buttonAddToCart">
