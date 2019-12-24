@@ -14,9 +14,6 @@ class HeaderNavbar extends Component {
     this.setState({ isLoggedIn: false });
   };
   render() {
-
-    console.log(this.state.isLoggedIn);
-    
     const styleNav = {
       textShadow: "0 0 12px white",
       borderBottom: "2px solid white"

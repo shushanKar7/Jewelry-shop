@@ -3,6 +3,8 @@ import { connect } from "react-redux";
 import Recipe from "../Components/Recipe";
 import { Link } from "react-router-dom";
 import braceletSectionBg from '../Images/compHeaderImg/33.png'
+import Footer from '../Components/sectionFooter/Footer';
+
 
 import {
   removeItem,
@@ -86,6 +88,7 @@ class Cart extends Component {
           <ul className="productCollection">{addedItems}</ul>
           <Recipe/>
         </div>
+        <Footer /> 
       </Fragment>
     );
   }

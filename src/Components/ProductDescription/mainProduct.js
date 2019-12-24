@@ -36,6 +36,8 @@ class mainProduct extends Component {
       +window.location.href[window.location.href.length - 1];
     href = +href;
     const PRODUCT = this.props.products[href];
+    console.log(PRODUCT.image);
+    
     return (
       <Fragment>
         <HeaderNavbar background={earringSectionBg} />
@@ -71,6 +73,7 @@ class mainProduct extends Component {
                   style={{ background: this.state.isAdded ? "#274354" : "" }}
                   onClick={() => {
                     this.handleClick();
+                    this.props.addToCart(PRODUCT.id)
                   }}
                 >
                   {this.state.isAdded ? "ADDED" : "ADD TO CART"}{" "}
@@ -95,12 +98,6 @@ let mapStateToProps = state => {
     products: state.products
   };
 };
-const mapDispatchToProps = dispatch => {
-  return {
-    addToCart: id => {
-      dispatch(addToCart(id));
-    }
-  };
-};
 
-export default connect(mapStateToProps, mapDispatchToProps)(mainProduct);
+
+export default connect(mapStateToProps, {addToCart})(mainProduct);

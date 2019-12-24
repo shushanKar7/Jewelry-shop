@@ -61,11 +61,10 @@ class SignIn extends Component {
     }
      this.props.logIn(this.state.errors)
   };
+  
   divRef;
   render() {
     const { user } = this.state;
-    console.log(this.state.isLogged)
-
     return (
       <Fragment>
         <div className="wrapper">
@@ -93,12 +92,12 @@ class SignIn extends Component {
                         required
                         name="Email"
                         id="Email"
-                        placeholder="Enter Your Name"
+                        placeholder="Enter Your Email"
                         onChange={this.handleChange}
                         noValidate
                       />
                       {user.Email.length > 0 && (
-                        <span className="error">{user.Email}</span>
+                        <span className="Loginerror">{user.Email}</span>
                       )}
                     </div>
                     <div>
@@ -107,12 +106,12 @@ class SignIn extends Component {
                         required
                         name="password"
                         id="password"
-                        placeholder="Enter Password"
+                        placeholder="Enter Your Password"
                         onChange={this.handleChange}
                         noValidate
                       />
                       {user.password.length > 0 && (
-                        <span className="error">{user.password}</span>
+                        <span className="Loginerror">{user.password}</span>
                       )}
                     </div>
                     <div>

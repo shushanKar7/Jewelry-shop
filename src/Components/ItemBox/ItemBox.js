@@ -43,9 +43,12 @@ class ItemBox extends Component {
             className="itemImage"
             style={{ backgroundImage: `url(${this.props.image})` }}
           >
-            <div className="overlayText .fadeIn-left">
-              <p style={{ padding: "20px" }}>{this.props.description}</p>
-            </div>
+            <Link to={`products/${this.props.id}`}>
+              <div className="overlayText .fadeIn-left">
+                <p style={{ padding: "20px" }}>{this.props.description}</p>
+              </div>
+            </Link>
+
             <Link to={`products/${this.props.id}`}>
               <div className="overlay"></div>
             </Link>
@@ -67,8 +70,8 @@ class ItemBox extends Component {
               >
                 {this.state.isAdded ? "ADDED" : "ADD TO CART"}
               </button>
-              <Link to={`BuyProducts/${this.props.id}`}>                
-              <button
+              <Link to={`BuyProducts/${this.props.id}`}>
+                <button
                   className="buttonAddToFavorite"
                   onClick={() => this.handleBuyClick(this.props.id)}
                 >

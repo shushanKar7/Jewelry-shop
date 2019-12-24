@@ -127,6 +127,9 @@ input:focus {
   display: relative;
   padding: 5px;
 }
+.Loginerror{
+  display: none;
+}
 
 @media screen and (max-width: 992px) {
   .content {
