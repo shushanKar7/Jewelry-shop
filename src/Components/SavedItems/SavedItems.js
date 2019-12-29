@@ -35,7 +35,7 @@ class SavedItems extends Component {
                         this.props.addToCart(val.id)
                         this.removeSavedItem(val.id)
                       }
-                      } className="buttonAddToCart"> Add to cart                
+                      } className="buttonAddToCart"> ADD TO CART                
                       </button>
                       <button
                         className="buttonAddToFavorite"
