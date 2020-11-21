@@ -1,0 +1,146 @@
+@import "HeaderNavbar.css";
+@import "Account.css";
+@import 'Product.css';
+@import "ItemBox.css";
+@import "MainFooter.css";
+@import "Footer.css";
+@import "backToTop.css";
+@import 'Cart.css';
+@import 'SavedItems.css';
+@import 'BuyProduct.css';
+
+* {
+    margin: 0;
+    padding: 0;
+    border: none;
+}
+
+html,
+body,
+.container {
+    width: 100%;
+    height: 100vh;
+    scroll-behavior: smooth;
+}
+                    /* //CSS FOR SLIDESHOW */
+                    /* //CSS FOR SLIDESHOW */
+.react-slideshow-container .nav{
+    position: absolute;
+    top: 50%;
+} 
+                    
+ .containerSlide {
+    background: rgba(0, 0, 0, 0.966);
+    width: 100vw;
+    height: 100vh;
+}
+
+.containerSlide .image {
+    height: 95vh;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(85%);
+}
+
+
+.react-slideshow-wrapper.slide {
+    width: 100%;
+    position: fixed;
+    overflow: hidden;
+    top: 0;
+    z-index: 0;
+}
+
+.react-slideshow-container .nav:last-of-type {
+    margin-left: -30px;
+    position: absolute;
+    right: 0;
+}
+
+.react-slideshow-container+div.indicators {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 3%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* checkbox */
+/* checkbox */
+#check[type=checkbox], #check[type=radio] {display: none;}
+#check[type=checkbox] + label:before {
+    content: "\2713";
+    color: transparent;
+    display: inline-block;
+    border: 1px solid black;
+    font-size: 20px;    
+    line-height: 22px;
+    margin: -5px 5px 0 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+    transition: color ease .3s;
+}
+#check[type=checkbox]:checked + label:before {
+    color: black;
+}
+#check[type=radio] + label:before {
+    content: "\26AB";
+    color: black;
+    border: 1px solid;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid;
+    font-size: 20px;    
+    line-height: 20px;
+    margin: -5px 5px 0 0;
+    height: 20px;
+    width: 20px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 0;    
+    transition: font-size ease .3s;
+}
+#check[type=radio]:checked + label:before {
+    font-size: 20px;    
+}
+
+
+    /* CSS FOR SCROLL */
+    /* CSS FOR SCROLL */
+    body::-webkit-scrollbar-track,
+    .cart::-webkit-scrollbar-track {
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #F5F5F5;
+    }
+    body::-webkit-scrollbar,
+    .cart::-webkit-scrollbar {
+        width: 12px;
+        background-color: #F5F5F5;
+    }
+    body::-webkit-scrollbar-thumb{
+        background: linear-gradient(to right, rgb(35, 66, 80), rgb(27, 49, 56), rgb(13, 28, 34));
+        border-radius: 10px;
+
+    }
+    .cart::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+        background-color: #375779;
+        background-image: linear-gradient(90deg, #375779 0%, #FFFFFF 55%, #375779 100%);
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+    body::-webkit-scrollbar-thumb:hover
+   {
+        background: linear-gradient(to right, rgb(28, 52, 65), rgb(17, 31, 36), rgb(12, 25, 31));
+
+        /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    }
+          
+    .cart::-webkit-scrollbar-thumb:hover {
+        background-image: linear-gradient(90deg, #2c4661 0%, rgb(229, 226, 226) 55%, #2c4661 100%);
+    }

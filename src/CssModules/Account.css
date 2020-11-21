@@ -1,0 +1,178 @@
+.wrapper {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background: rgb(241, 245, 246);
+}
+
+.registerLogo {
+  background: url("../Images/logo.png"), no-repeat;
+  width: 230px;
+  min-width: 230px;
+  height: 150px;
+  min-height: 150px;
+  background-size: cover;
+  position: absolute;
+  z-index: -1;
+  top: 5%;
+  left: 2.5%;
+}
+
+.box1 {
+  width: 50%;
+  background: url("../Images/registerImage/registerBackground.jpg"), no-repeat;
+  background-size: cover;
+  opacity: 0.96;
+}
+.content {
+  width: 70%;
+  margin: 6% auto;
+}
+
+.box2 {
+  width: 50%;
+  display: flex;
+}
+
+.box2 .content {
+  margin: auto;
+  width: 60%;
+  font-family: "Montserrat", sans-serif;
+}
+
+.box2 .contentSignIn {
+  margin: auto;
+  width: 60%;
+  font-family: "Montserrat", sans-serif;
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.contentSignIn h2 {
+  padding-bottom: 7%;
+  font-weight: 700;
+  font-size: 40px;
+  font-family: "Varela Round";
+}
+.title {
+  font-size: 40px;
+  font-family: "Varela Round";
+  color: #4d1b26;
+  margin-bottom: 20px;
+  font-weight: 700;
+  text-align: center;
+}
+
+input {
+  background-color: rgba(0, 0, 0, 0);
+  box-shadow: 0;
+  border: 0;
+  border-bottom: 1px #b5b5b5 solid;
+  width: 100%;
+  font-size: 18px;
+  padding: 5px;
+  color: #444;
+  font-family: "Varela Round";
+}
+
+input::placeholder {
+  color: rgb(100, 98, 98);
+  font-size: 16px;
+  letter-spacing: 2px;
+  font-family: "Varela Round";
+}
+
+input:focus {
+  outline: none;
+}
+.submit {
+  margin: 0 auto;
+  border-radius: 25px;
+  border: 0;
+  background-color: #401d22;
+  color: white;
+  padding: 10px 30px;
+  font-size: 16px;
+  margin-top: 30px;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+}
+.submit:hover {
+  background: #370b0d;
+}
+.box2 p {
+  font-size: 16px;
+  text-align: center;
+  color: rgb(100, 98, 98);
+}
+
+.box2 p a {
+  text-decoration: none;
+  color: #4d1b26;
+  cursor: pointer;
+}
+
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+.error {
+  color: #4d1b26;
+  font-size: 12px;
+  display: relative;
+  padding: 5px;
+}
+.Loginerror{
+  display: none;
+}
+
+@media screen and (max-width: 992px) {
+  .content {
+    width: 100%;
+    margin: 5% 0 0 10%;
+  }
+  .box2 .content {
+    margin: 10% auto;
+    width: 85%;
+  }
+}
+@media screen and (max-width: 764px) {
+  .wrapper {
+    flex-direction: column;
+  }
+  .box1,
+  .box2 {
+    width: 100%;
+    height: 50%;
+  }
+  .content {
+    width: 70%;
+    margin: 5% 0 0 10%;
+  }
+  .box2 .content {
+    margin: 10% auto;
+    width: 60%;
+  }
+  h3 {
+    padding-bottom: 10%;
+  }
+  .box1 p {
+    padding-bottom: 20%;
+  }
+}
+
+@media screen and (max-width: 575px) {
+  .content {
+    width: 90%;
+    margin: 5% 0 0 10%;
+  }
+  .box2 .content {
+    margin: 10% auto;
+    width: 90%;
+  }
+}
